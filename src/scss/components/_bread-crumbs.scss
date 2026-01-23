@@ -1,0 +1,32 @@
+.bread-crumbs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.bread-crumbs__link {
+    display: inline-flex;
+    align-items: center;
+    color: $black1;
+    margin-right: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all ease 0.3s;
+
+    svg {
+        display: block;
+        margin-left: 5px;
+    }
+
+    &:hover {
+        color: $green1;
+        transition: all ease 0.3s;
+    }
+}
+
+.bread-crumbs__current {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: $black1;
+}

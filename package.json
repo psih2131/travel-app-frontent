@@ -26,6 +26,7 @@
     "vite-plugin-image-optimizer": "^1.1.8"
   },
   "dependencies": {
+    "@fancyapps/ui": "^6.1.9",
     "swiper": "^11.2.10",
     "vite-plugin-full-reload": "^1.2.0"
   }

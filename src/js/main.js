@@ -1,7 +1,10 @@
 import '../scss/main.scss'
 
-import { test } from './test-script.js'
+import {
+    postSlider,
 
-test()
+} from "./swiperSliders.js";
+
+postSlider()
 
 

@@ -8,10 +8,19 @@
 //components
 @import "header";
 @import "footer";
+@import "components/bread-crumbs";
+@import "components/tour-card";
+@import "components/pagination";
+@import "components/guide-card";
+@import "components/blog-slider";
+@import "components/post";
+@import "components/review";
 
 
 //pages
 @import "home";
+@import "tours";
+@import "tour";
 
 
 //libs

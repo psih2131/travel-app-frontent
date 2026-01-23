@@ -1,0 +1,124 @@
+.blog-post {
+    background: $white;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.blog-post__image-wrapper {
+    width: 100%;
+    height: 264px;
+    display: block;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    .blog-post__image-wrapper {
+        display: block;
+    }
+}
+
+.blog-post__image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: all ease 0.3s;
+
+    &:hover {
+        transform: scale(1.05);
+        transition: all ease 0.3s;
+    }
+}
+
+.blog-post__data {
+    padding: 0 15px 15px 15px;
+}
+
+.blog-post__date {
+    color: #9AA4B2;
+    margin-top: 20px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 100%;
+
+}
+
+.blog-post__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+
+.blog-post__title {
+    width: calc(100% - 35px);
+    padding-right: 15px;
+    color: #1C274C;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.blog-post__link-ar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    width: 35px;
+    height: 35px;
+    fill: #FFF;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10);
+
+    svg {
+        display: block;
+        transition: all ease 0.3s;
+    }
+
+    &:hover {
+        svg {
+            transform: rotate(45deg);
+            transition: all ease 0.3s;
+        }
+    }
+}
+
+.blog-post__subtitle {
+    margin-top: 15px;
+    color: #9AA4B2;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+}
+
+.blog-post__teg-row {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blog-post__teg {
+    display: inline-block;
+    padding: 8px 9px;
+    border-radius: 100px;
+    border: 2px solid $green1;
+    color: $green1;
+    margin: 8px 8px 0 0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    border-radius: 100px;
+    transition: all ease 0.3s;
+
+    &:hover {
+        color: #fff;
+        background: $green2;
+        border: 2px solid $green2;
+        transition: all ease 0.3s;
+    }
+}

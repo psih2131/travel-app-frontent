@@ -88,8 +88,9 @@ textarea {
 }
 
 body {
-	background: #fff;
+	background: $white;
 	font-family: $mainFont;
+	color: $black1;
 }
 
 h1,
@@ -118,7 +119,7 @@ svg {
 }
 
 .container {
-	width: 1500px;
+	width: 1220px;
 	margin: 0 auto;
 }
 

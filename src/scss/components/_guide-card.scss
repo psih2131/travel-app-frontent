@@ -1,0 +1,125 @@
+.guide-card {
+    padding: 5px;
+    border-radius: 20px;
+    background: $white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: flex-start;
+}
+
+.guide-card__img-wrapper {
+    width: 125px;
+    height: 125px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.guide-card___img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.guide-card__data {
+    width: calc(100% - 125px);
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+}
+
+.guide-card__name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.guide-card__info-row {
+    display: flex;
+    align-items: center;
+}
+
+.guide-card__rate {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+    svg {
+        display: block;
+        margin-right: 5px;
+        width: 15px;
+        height: auto;
+    }
+}
+
+.guide-card__rate-rate-count {
+    font-size: 16px;
+    color: $grey1;
+    font-weight: 500;
+}
+
+.guide-card__reviews {
+    display: flex;
+    align-items: center;
+
+    svg {
+        display: block;
+        width: 20px;
+        height: auto;
+        margin-right: 5px;
+    }
+}
+
+.guide-card__reviews-counter {
+    font-size: 14px;
+    font-weight: 500;
+    color: $grey1;
+}
+
+.guide-card__description {
+    margin-top: 12px;
+    font-size: 14px;
+    color: $grey1;
+    line-height: 1.3;
+}
+
+.guide-card__btn-wrapper {
+    margin-top: 20px;
+}
+
+.guide-card__btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px;
+    border-radius: 100px;
+    background: $green1;
+    color: $white;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 25px;
+    transition: all ease 0.3s;
+
+    &:hover {
+        background: $green2;
+        transition: all ease 0.3s;
+    }
+}
+
+.guide-card__btn-icon {
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: $white;
+    margin-left: 20px;
+
+    svg {
+        width: 30px;
+        height: auto;
+        display: block;
+    }
+}

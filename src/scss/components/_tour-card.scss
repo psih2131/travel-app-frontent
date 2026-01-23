@@ -1,0 +1,241 @@
+.tour-card {
+    padding: 5px;
+    background: $white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tour-card__img-wrapper {
+    width: 100%;
+    height: 335px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+
+    &:hover {
+        .tour-card__img {
+            transform: scale(1.03);
+            transition: all ease 0.3s;
+        }
+    }
+
+    &::before {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 40%;
+        left: 0;
+        top: 0;
+        content: "";
+        background: linear-gradient(180deg, rgba(0, 41, 81, 0.3) 0%, rgba(0, 41, 81, 0) 100%);
+    }
+
+    &:after {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 20%;
+        left: 0;
+        bottom: 0;
+        transform: rotate(180deg);
+        content: "";
+        background: linear-gradient(180deg, rgba(0, 41, 81, 0.3) 0%, rgba(0, 41, 81, 0) 100%);
+    }
+}
+
+.tour-card__img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: all ease 0.3s;
+}
+
+.tour-card__img-top-row {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 18px 0 18px;
+}
+
+.tour-card__img-down-row {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 18px 18px 18px;
+}
+
+.tour-card__tags-row {
+    display: flex;
+}
+
+.tour-card__tag {
+    border-radius: 100px;
+    display: inline-block;
+    color: $white;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    font-size: 12px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.07);
+    transition: all ease 0.3s;
+    margin-right: 8px;
+
+    &:hover {
+        background: $green2;
+        transition: all ease 0.3s;
+    }
+}
+
+.tour-card__rate {
+    display: flex;
+    align-items: center;
+
+    svg {
+        display: block;
+        margin-right: 5px;
+    }
+}
+
+.tour-card__rate-num {
+    font-size: 12px;
+    font-weight: 500;
+    color: $white;
+}
+
+.tour-card__img-down-row {
+    font-size: 14px;
+    font-weight: 500;
+    color: $white;
+}
+
+.tour-card__body {
+    padding: 20px;
+}
+
+.tour-card__title {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.tour-card__title-link {
+    color: $black1;
+    transition: all ease 0.3s;
+
+    &:hover {
+        color: $green1;
+        transition: all ease 0.3s;
+    }
+}
+
+.tour-card__description {
+    color: $grey1;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+.tour-card__reserve-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tour-card__down {
+    padding: 20px;
+    padding-top: 0;
+}
+
+.tour-card__price {
+    font-weight: 600;
+    font-size: 18px;
+
+    span {
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+.tour-card__btn {
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    border-radius: 100px;
+    background: $green1;
+    color: $white;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 15px;
+    transition: all ease 0.3s;
+
+    &:hover {
+        background: $green2;
+        transition: all ease 0.3s;
+    }
+}
+
+.tour-card__btn-ar {
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: $white;
+    margin-left: 10px;
+
+    svg {
+        width: 25px;
+        height: auto;
+        display: block;
+    }
+}
+
+.tour-card__date-list {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.tour-card__date {
+    font-size: 14px;
+    color: $grey1;
+    font-weight: 500;
+    margin-right: 20px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+
+
+    &::before {
+        width: 5px;
+        height: 5px;
+        border-radius: 100px;
+        content: "";
+        position: absolute;
+        right: -13px;
+        background: $green2;
+    }
+
+    &:last-child {
+        margin-right: 0;
+
+        &::before {
+            opacity: 0;
+        }
+    }
+}
