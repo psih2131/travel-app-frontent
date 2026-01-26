@@ -1,0 +1,96 @@
+.program-tour {
+    padding-bottom: 50px;
+}
+
+.program-tour__title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.program-tour__acordeon {
+    border-bottom: solid 1px #ccc;
+}
+
+.program-tour__acordeon-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.program-tour__acordeon-title {
+    font-size: 18px;
+    font-weight: 600;
+    width: calc(100% - 20px);
+    padding-right: 15px;
+}
+
+.program-tour__acordeon-ar {
+    width: 15px;
+
+    img {
+        width: 100%;
+        display: block;
+        transition: all ease 0.3s;
+    }
+}
+
+.program-tour__acordeon-body {
+    display: none;
+    padding-bottom: 15px;
+}
+
+.program-tour__acordeon-stap {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 30px;
+    position: relative;
+
+    &::before {
+        width: 2px;
+        height: calc(100% - 40px);
+        left: 19px;
+        top: 40px;
+        background: $green2;
+        content: "";
+        position: absolute;
+    }
+
+    &:last-child {
+        &::before {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+}
+
+.program-tour__acordeon-stap-num {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $green1;
+    font-size: 18px;
+    font-weight: 700;
+    color: $white;
+    border-radius: 100px;
+}
+
+.program-tour__acordeon-data {
+    width: calc(100% - 40px);
+    padding-left: 20px;
+}
+
+.program-tour__acordeons {
+    margin-top: 20px;
+}
+
+.program-tour__acordeon-data-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}

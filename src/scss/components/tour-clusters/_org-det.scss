@@ -1,0 +1,41 @@
+.org-det {
+    padding-bottom: 50px;
+}
+
+.org-det__title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.org-det__element {
+    border-bottom: solid 1px #ccc;
+}
+
+.org-det__element-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.org-det__element-header-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.org-det__element-ar {
+    width: 15px;
+
+    img {
+        width: 100%;
+        display: block;
+        transition: all ease 0.3s;
+    }
+}
+
+.org-det__element-body {
+    display: none;
+    padding-bottom: 15px;
+}

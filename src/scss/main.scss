@@ -15,7 +15,13 @@
 @import "components/blog-slider";
 @import "components/post";
 @import "components/review";
+@import "components/wp-editor";
 
+@import "components/tour-clusters/description";
+@import "components/tour-clusters/org-det";
+@import "components/tour-clusters/living";
+@import "components/tour-clusters/galery-img";
+@import "components/tour-clusters/program";
 
 //pages
 @import "home";
