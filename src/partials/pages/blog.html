@@ -1,0 +1,85 @@
+<section class="blog-sec">
+
+    <div class="blog-sec__wrapper">
+        <h1 class="blog-sec__title">Блог</h1>
+        <p class="blog-sec__subtitle">Все самое нужное, чтобы сделать важный выбор на основе детальной
+            информации из проверенного источника, которая обновляется ежедневно.</p>
+        <nav class="blog-sec__nav">
+            <ul class="blog-sec__nav-ul">
+                <li class="blog-sec__nav-li">
+                    <a href="" class="blog-sec__nav-link blog-sec__nav-link--activ">Кредитование</a>
+                </li>
+                <li class="blog-sec__nav-li">
+                    <a href="" class="blog-sec__nav-link">Строительство</a>
+                </li>
+                <li class="blog-sec__nav-li">
+                    <a href="" class="blog-sec__nav-link">Иновации</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="blog-sec__post-container">
+
+            {{> components/post
+            img="/src/img/post1.jpg"
+            title="Где отдыхать во Вьетнаме"
+            }}
+
+            {{> components/post
+            img="/src/img/post2.jpg"
+            title="Фукуок — изумрудный остров в Сиамском заливе"
+            }}
+
+            {{> components/post
+            img="/src/img/post3.jpg"
+            title="Вьетнамская кухня: 10 блюд, которые стоит попробовать"
+            }}
+
+            {{> components/post
+            img="/src/img/post2.jpg"
+            title="Фукуок — изумрудный остров в Сиамском заливе"
+            }}
+
+            {{> components/post
+            img="/src/img/post1.jpg"
+            title="Где отдыхать во Вьетнаме"
+            }}
+
+            {{> components/post
+            img="/src/img/post2.jpg"
+            title="Фукуок — изумрудный остров в Сиамском заливе"
+            }}
+
+            {{> components/post
+            img="/src/img/post3.jpg"
+            title="Вьетнамская кухня: 10 блюд, которые стоит попробовать"
+            }}
+
+            {{> components/post
+            img="/src/img/post2.jpg"
+            title="Фукуок — изумрудный остров в Сиамском заливе"
+            }}
+
+            {{> components/post
+            img="/src/img/post3.jpg"
+            title="Вьетнамская кухня: 10 блюд, которые стоит попробовать"
+            }}
+
+
+        </div>
+
+
+        <div class="pagination-wrapper pagination-wrapper--blog">
+            <div class="pagination">
+                <a class="prev page-numbers" href="">« Назад</a>
+                <span aria-current="page" class="page-numbers current">1</span>
+                <a class="page-numbers" href="">2</a>
+                <a class="page-numbers" href="">3</a>
+                <span class="page-numbers dots">…</span>
+                <a class="page-numbers" href="">12</a>
+                <a class="next page-numbers" href="">Вперед
+                    »</a>
+            </div>
+        </div>
+    </div>
+</section>

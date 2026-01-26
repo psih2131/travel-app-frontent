@@ -1,0 +1,99 @@
+.header {
+    padding: 20px 0;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.header__logo {
+    width: 200px;
+    display: block;
+}
+
+.header__logo-img {
+    width: 100%;
+    display: block;
+}
+
+.header__nav-list {
+    display: flex;
+
+    li {
+        margin: 0 20px;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: -0.5px;
+    }
+
+    a {
+        color: $grey1;
+        transition: all ease 0.3s;
+
+        &:hover {
+            color: $green1;
+            transition: all ease 0.3s;
+        }
+    }
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+}
+
+.header__auth-btn {
+    background: $green1;
+    border-radius: 100px;
+    padding: 11px 30px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $white;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: all ease 0.3s;
+
+    &:hover {
+        background: $orange1;
+        transition: all ease 0.3s;
+    }
+}
+
+.header__search {
+    position: relative;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.header__search-input {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 11px;
+    padding-left: 20px;
+    width: 100%;
+    border: none;
+    border-radius: 100px;
+    background: $lightGrey1;
+    padding-right: 30px;
+}
+
+.header__search-icon {
+    position: absolute;
+    right: 10px;
+    z-index: 10;
+    cursor: pointer;
+
+    svg {
+        display: block;
+    }
+}
