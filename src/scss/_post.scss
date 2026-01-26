@@ -1,0 +1,356 @@
+.post-sec {
+    padding-top: 180px;
+    padding-bottom: 100px;
+}
+
+.post-sec__container {
+    width: 768px;
+    margin: 0 auto;
+}
+
+.post-sec__date {
+    color: rgba(28, 39, 76, 0.70);
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%;
+    /* 27px */
+}
+
+.post-sec__title {
+    color: $black1;
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    margin-top: 25px;
+
+    /* 36px */
+}
+
+.post-sec__subtitle {
+    width: 100%;
+    text-align: center;
+    color: rgba(28, 39, 76, 0.70);
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin-top: 35px;
+}
+
+.post-sec__img {
+    margin: 0 auto;
+    width: 1024px;
+    height: 560px;
+    border-radius: 20px;
+    margin-top: 60px;
+    margin-bottom: 88px;
+    display: block;
+    object-fit: cover;
+}
+
+.wp-editor-post {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #1C274C;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 126%;
+        margin-bottom: 30px;
+    }
+
+    h1,
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+
+    h6 {
+        font-size: 18px;
+    }
+
+    p {
+        color: rgba(28, 39, 76, 0.70);
+        margin-bottom: 40px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 126%;
+        /* 22.68px */
+    }
+
+    a {
+        color: #85D2A9;
+        text-decoration: underline;
+    }
+
+    b,
+    strong {
+        font-weight: 600;
+        color: rgba(28, 39, 76, 1);
+    }
+
+    ul {
+        padding-left: 22px;
+        padding-bottom: 20px;
+
+        li {
+            color: rgba(28, 39, 76, 0.69);
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 126%;
+            /* 22.68px */
+            margin-bottom: 20px;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background: $green2;
+                content: "";
+                left: -22px;
+                top: 5px;
+                border-radius: 100px;
+            }
+        }
+    }
+
+    ol {
+        padding-left: 22px;
+        padding-bottom: 20px;
+
+        li {
+            color: rgba(28, 39, 76, 0.69);
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 126%;
+            /* 22.68px */
+            margin-bottom: 20px;
+            position: relative;
+            list-style-type: decimal;
+
+        }
+    }
+}
+
+.post-sec__teg-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    border-top: solid 2px #EEF0F2;
+}
+
+.post-sec__back-ar {
+    margin-top: 63px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-sec__btn-ar-back {
+    display: inline-flex;
+    align-items: center;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    padding: 13px 15px;
+    border-radius: 10px;
+    background: #85D2A9;
+    transition: all ease 0.3s;
+
+    svg {
+        display: block;
+        margin-right: 15px;
+    }
+
+    &:hover {
+        background: #1C274C;
+        transition: all ease 0.3s;
+    }
+}
+
+.reccoment-post-sec {
+
+    padding-bottom: 125px;
+
+}
+
+.reccoment-post-sec__title {
+    color: $black1;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%;
+    margin-bottom: 40px;
+    /* 42px */
+}
+
+
+
+@media only screen and (max-width: 1540px) {
+    .reccoment-post-sec__slider-row {
+        .swiper-button-prev {
+            left: -30px;
+        }
+
+        .swiper-button-next {
+            right: -30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .post-sec {
+        padding-top: 130px;
+    }
+
+
+}
+
+@media only screen and (max-width: 1050px) {
+    .post-sec__img {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+
+@media only screen and (max-width: 780px) {
+    .post-sec__container {
+        width: 350px;
+    }
+
+    .post-sec {
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+
+    .post-sec__date {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 150%;
+
+    }
+
+    .post-sec__title {
+        margin-top: 10px;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 100%;
+        margin-bottom: 0;
+    }
+
+    .post-sec__subtitle {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 126%;
+        margin-top: 20px;
+    }
+
+    .post-sec__img {
+        margin-top: 30px;
+        margin-bottom: 40px;
+        height: 280px;
+    }
+
+    .wp-editor-post {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-bottom: 20px;
+        }
+
+        h1,
+        h2 {
+            font-size: 22px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+
+        h5 {
+            font-size: 16px;
+        }
+
+        h6 {
+            font-size: 14px;
+        }
+
+        P {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 126%;
+            margin-bottom: 30px;
+        }
+
+        ul {
+            li {
+                font-size: 16px;
+            }
+        }
+
+        ol {
+            li {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .post-sec__back-ar {
+        margin-top: 35px;
+    }
+
+    .post-sec__btn-ar-back {
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    .reccoment-post-sec__title {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        margin-bottom: 30px;
+    }
+
+
+}
