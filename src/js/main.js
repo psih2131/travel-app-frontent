@@ -8,6 +8,7 @@ import { acordeon, funcyBox, acordeonProgram } from "./tourPageScripst.js";
 
 import { reviewCardTruncate } from "./reviewCardTruncate.js";
 import { faqAccordion } from "./faqAccordion.js";
+import { heroSearch } from "./heroSearch.js";
 
 postSlider()
 
@@ -26,3 +27,4 @@ reviewsSlider()
 reviewCardTruncate()
 
 faqAccordion()
+heroSearch()

@@ -1,0 +1,261 @@
+.hero-search {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-search__inner {
+    display: flex;
+    align-items: stretch;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 100px;
+    padding: 8px 8px 8px 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    gap: 0;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 16px;
+    }
+}
+
+.hero-search__field {
+    flex: 1;
+    min-width: 140px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+}
+
+.hero-search__icon {
+    flex-shrink: 0;
+    color: $grey1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        display: block;
+    }
+}
+
+.hero-search__trigger {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 14px 0;
+    background: none;
+    border: none;
+    font: inherit;
+    font-size: 15px;
+    color: $black1;
+    cursor: pointer;
+    text-align: left;
+    min-width: 0;
+
+    @media (max-width: 768px) {
+        padding: 12px 0;
+    }
+}
+
+.hero-search__value {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: $black1;
+    font-weight: 500;
+
+    .hero-search__trigger:not([data-value]) &,
+    .hero-search__field--direction .hero-search__trigger[data-value=""] &,
+    .hero-search__field--price .hero-search__trigger:not([data-value]) &,
+    .hero-search__field--date .hero-search__trigger:not([data-value]) & {
+        color: $grey1;
+    }
+}
+
+.hero-search__chevron {
+    flex-shrink: 0;
+    color: $grey1;
+    transition: transform 0.2s ease;
+
+    .hero-search__field.is-open & {
+        transform: rotate(180deg);
+    }
+
+    svg {
+        display: block;
+    }
+}
+
+.hero-search__sep {
+    width: 1px;
+    align-self: stretch;
+    background: rgba(0, 0, 0, 0.1);
+    margin: 8px 0;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        height: 1px;
+        margin: 4px 0;
+    }
+}
+
+.hero-search__dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 8px;
+    background: $white;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    overflow: hidden;
+}
+
+.hero-search__dropdown--direction {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.hero-search__list {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+}
+
+.hero-search__option {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    background: none;
+    font: inherit;
+    font-size: 15px;
+    color: $black1;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.15s ease;
+
+    &:hover {
+        background: $lightGrey1;
+    }
+}
+
+.hero-search__dropdown--price {
+    padding: 20px;
+    min-width: 280px;
+}
+
+.hero-search__price-range {
+    margin-bottom: 16px;
+    height: 6px;
+
+    .noUi-target {
+        border: none;
+        background: $lightGrey1;
+        border-radius: 3px;
+    }
+    .noUi-connect {
+        background: $green1;
+    }
+    .noUi-handle {
+        width: 20px;
+        height: 20px;
+        right: -10px;
+        top: -7px;
+        border-radius: 50%;
+        border: 2px solid $green1;
+        background: $white;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+
+        &::before, &::after {
+            display: none;
+        }
+    }
+}
+
+.hero-search__price-inputs {
+    display: flex;
+    gap: 12px;
+}
+
+.hero-search__price-label {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+    color: $grey1;
+
+    input {
+        padding: 10px 12px;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        border-radius: 10px;
+        font-size: 14px;
+    }
+}
+
+.hero-search__date-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+}
+
+.hero-search__btn {
+    flex-shrink: 0;
+    padding: 14px 28px;
+    border-radius: 100px;
+    background: $green1;
+    color: $white;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+        background: $green2;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        margin-top: 8px;
+    }
+}
+
+// Flatpickr overrides (календарь открыт в body, стили глобальные)
+.flatpickr-calendar {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+.flatpickr-current-month .numInputWrapper {
+    display: none !important;
+}
+.flatpickr-prev-month,
+.flatpickr-next-month {
+    padding: 8px 12px;
+    top: 0;
+}
+.flatpickr-prev-month:hover svg,
+.flatpickr-next-month:hover svg {
+    fill: $green1;
+}
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+    background: $green1;
+    border-color: $green1;
+}
+.flatpickr-day.inRange {
+    background: rgba(93, 184, 166, 0.2);
+    box-shadow: none;
+}

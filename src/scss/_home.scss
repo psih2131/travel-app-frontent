@@ -1,6 +1,105 @@
+// Одна секция, два блока внутри
 .home-hero-sec {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+   overflow: visible;
+   padding-bottom: 125px;
+}
+
+// Блок 1: фон + поиск
+.home-hero-sec__block--hero {
+    position: relative;
+    min-height: 520px;
+    padding: 160px 0 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        min-height: 480px;
+        padding: 120px 0 48px;
+    }
+}
+
+.home-hero-sec__bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.home-hero-sec__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 1;
+}
+
+.home-hero-sec__content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.home-hero-sec__title {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    color: $white;
+    text-align: center;
+    margin: 0 0 12px;
+    line-height: 1.2;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.home-hero-sec__subtitle {
+    font-size: clamp(15px, 2vw, 18px);
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    margin: 0 0 32px;
+    font-weight: 500;
+}
+
+// Блок 2: карточки статистики
+.home-hero-sec__block--stats {
+padding-top: 30px;
+
+}
+
+.home-hero-sec__stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+.home-hero-sec__stat {
+    text-align: center;
+    padding: 24px 16px;
+    background: $white;
+    border-radius: 16px;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-hero-sec__stat-num {
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    color: $black1;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.home-hero-sec__stat-label {
+    font-size: 14px;
+    color: $grey1;
+    font-weight: 500;
 }
 
 .sec-header {

@@ -1,7 +1,39 @@
 <section class="home-hero-sec">
-
-    <div class="container">test</div>
-
+    <!-- Блок 1: фон + поиск -->
+    <div class="home-hero-sec__block home-hero-sec__block--hero">
+        <div class="home-hero-sec__bg" style="background-image: url('/src/img/dir-1.jpg');"></div>
+        <div class="home-hero-sec__overlay"></div>
+        <div class="home-hero-sec__content">
+            <div class="container">
+                <h1 class="home-hero-sec__title">Невероятная природа и культура путешествий</h1>
+                <p class="home-hero-sec__subtitle">Исследуйте мир с гидами, которые знают каждую тропу</p>
+                {{> components/hero-search }}
+            </div>
+        </div>
+    </div>
+    <!-- Блок 2: карточки статистики -->
+    <div class="home-hero-sec__block home-hero-sec__block--stats">
+        <div class="container">
+            <div class="home-hero-sec__stats-grid">
+                <div class="home-hero-sec__stat">
+                    <span class="home-hero-sec__stat-num">937+</span>
+                    <span class="home-hero-sec__stat-label">Направлений</span>
+                </div>
+                <div class="home-hero-sec__stat">
+                    <span class="home-hero-sec__stat-num">117</span>
+                    <span class="home-hero-sec__stat-label">Стран</span>
+                </div>
+                <div class="home-hero-sec__stat">
+                    <span class="home-hero-sec__stat-num">2K+</span>
+                    <span class="home-hero-sec__stat-label">Туров</span>
+                </div>
+                <div class="home-hero-sec__stat">
+                    <span class="home-hero-sec__stat-num">4.9</span>
+                    <span class="home-hero-sec__stat-label">Средний рейтинг</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="home-popular-directions">
