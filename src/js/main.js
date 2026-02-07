@@ -7,6 +7,7 @@ import { galeryTour } from "./galeryTour.js";
 import { acordeon, funcyBox, acordeonProgram } from "./tourPageScripst.js";
 
 import { reviewCardTruncate } from "./reviewCardTruncate.js";
+import { faqAccordion } from "./faqAccordion.js";
 
 postSlider()
 
@@ -24,3 +25,4 @@ reviewsSlider()
 
 reviewCardTruncate()
 
+faqAccordion()

@@ -1,0 +1,15 @@
+<div class="faq-item">
+    <button type="button" class="faq-item__header" aria-expanded="false" aria-controls="faq-body-{{id}}" id="faq-header-{{id}}" data-faq-toggle>
+        <span class="faq-item__question">{{question}}</span>
+        <span class="faq-item__chevron" aria-hidden="true">
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </span>
+    </button>
+    <div class="faq-item__body" id="faq-body-{{id}}" role="region" aria-labelledby="faq-header-{{id}}" hidden>
+        <div class="faq-item__content">
+            {{answer}}
+        </div>
+    </div>
+</div>
