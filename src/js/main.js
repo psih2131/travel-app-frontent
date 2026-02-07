@@ -1,10 +1,12 @@
 import '../scss/main.scss'
 
-import { postSlider, guideSlider } from "./swiperSliders.js";
+import { postSlider, guideSlider, reviewsSlider } from "./swiperSliders.js";
 
 import { galeryTour } from "./galeryTour.js";
 
 import { acordeon, funcyBox, acordeonProgram } from "./tourPageScripst.js";
+
+import { reviewCardTruncate } from "./reviewCardTruncate.js";
 
 postSlider()
 
@@ -17,4 +19,8 @@ funcyBox()
 acordeonProgram()
 
 guideSlider()
+
+reviewsSlider()
+
+reviewCardTruncate()
 

@@ -107,4 +107,32 @@ function guideSlider() {
 
 
 
-export { postSlider, guideSlider }
+function reviewsSlider() {
+    const swiper = new Swiper(".reviews-slider-swiper", {
+        modules: [Navigation],
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 30,
+        speed: 700,
+        navigation: {
+            nextEl: ".reviews-swiper-button-next",
+            prevEl: ".reviews-swiper-button-prev",
+        },
+        breakpoints: {
+            300: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            780: {
+                slidesPerView: 2,
+                spaceBetween: 24,
+            },
+            1281: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+            },
+        },
+    });
+}
+
+export { postSlider, guideSlider, reviewsSlider }

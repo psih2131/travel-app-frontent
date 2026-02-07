@@ -1,0 +1,43 @@
+.reviews-slider-wrapper {
+    position: relative;
+}
+
+.reviews-slider-wrapper {
+    .swiper-button-blog {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        background: $white;
+        z-index: 20;
+        cursor: pointer;
+        border: solid 1px $green2;
+    }
+
+    .reviews-swiper-button-prev {
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+
+    .reviews-swiper-button-next {
+        right: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.reviews-slider-swiper {
+    .swiper-slide {
+        height: auto;
+        padding: 10px;
+    }
+
+    .review-card {
+        height: 100%;
+    }
+}
