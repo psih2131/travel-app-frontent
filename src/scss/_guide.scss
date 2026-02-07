@@ -1,0 +1,150 @@
+// Hero section
+.guide-hero-sec {
+    padding-top: 125px;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.guide-hero-sec__top-band {
+    height: 100px;
+    background: $lightGrey1;
+    margin-bottom: -40px;
+}
+
+.guide-hero-sec__inner {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+    background: $white;
+    border-radius: 12px;
+    padding: 56px 40px 40px;
+    box-shadow: 0 4px 24px rgba($black1, 0.08);
+}
+
+.guide-hero-sec__profile {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.guide-hero-sec__avatar-wrap {
+    width: 140px;
+    height: 140px;
+    margin: -96px auto 16px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid $white;
+    box-shadow: 0 4px 20px rgba($black1, 0.12);
+}
+
+.guide-hero-sec__avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.guide-hero-sec__name {
+    font-family: $titleFont, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: $black1;
+    margin: 0 0 16px;
+    line-height: 1.2;
+}
+
+.guide-hero-sec__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.guide-hero-sec__stat {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: $black1;
+
+    .guide-hero-sec__stat-icon {
+        flex-shrink: 0;
+        color: $green1;
+    }
+}
+
+.guide-hero-sec__stat-value {
+    font-weight: 600;
+}
+
+.guide-hero-sec__stat-link {
+    color: $green1;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: darken($green1, 8%);
+        text-decoration: underline;
+    }
+}
+
+.guide-hero-sec__about {
+    flex: 1;
+    min-width: 0;
+}
+
+.guide-hero-sec__text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: $black1;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .guide-hero-sec__inner {
+        flex-direction: column;
+        padding: 48px 20px 32px;
+        gap: 24px;
+    }
+    .guide-hero-sec__avatar-wrap {
+        margin-top: -96px;
+    }
+    .guide-hero-sec__stats {
+        align-items: center;
+    }
+}
+
+.guide-tours-sec{
+    padding-bottom: 125px;
+}
+.guide-tours-sec__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    .tour-card{
+        width: calc(33.333% - 30px);
+        margin: 0 15px 30px 15px;
+    }
+}
+.guide-tours-sec__title{
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 800;
+    margin-bottom: 35px;
+}
+.guide-tours-sec__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.guide-tours-sec__counter{
+    font-size: 16px;
+    font-weight: 400;
+    color: $grey1;
+
+    span{
+        font-size: 20px;
+        color: $green1;
+        font-weight: 800;
+    }
+}

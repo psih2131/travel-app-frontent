@@ -1,0 +1,102 @@
+<section class="guide-hero-sec">
+    <div class="guide-hero-sec__top-band"></div>
+    <div class="container">
+        <div class="guide-hero-sec__inner">
+            <div class="guide-hero-sec__profile">
+                <div class="guide-hero-sec__avatar-wrap">
+                    <img src="/src/img/guide1.jpg" alt="Юлия" class="guide-hero-sec__avatar">
+                </div>
+                <h1 class="guide-hero-sec__name">Юлия</h1>
+                <div class="guide-hero-sec__stats">
+                    <div class="guide-hero-sec__stat">
+                        <svg class="guide-hero-sec__stat-icon" width="18" height="18" viewBox="0 0 20 20" fill="none">
+                            <path d="M19 7.59C19 7.32 18.8 7.16 18.39 7.09L12.96 6.31L10.53 1.44C10.39 1.15 10.22 1 10 1C9.78 1 9.61 1.15 9.47 1.44L7.04 6.31L1.61 7.09C1.2 7.16 1 7.32 1 7.59C1 7.74 1.09 7.91 1.27 8.1L5.21 11.89L4.28 17.25C4.26 17.35 4.26 17.42 4.26 17.46C4.26 17.61 4.29 17.74 4.37 17.84C4.45 17.95 4.56 18 4.71 18C4.84 18 4.98 17.96 5.14 17.87L10 15.34L14.86 17.87C15.01 17.96 15.15 18 15.29 18C15.59 18 15.73 17.82 15.73 17.46C15.73 17.37 15.73 17.3 15.72 17.25L14.79 11.89L18.72 8.1C18.91 7.92 19 7.74 19 7.59Z" fill="currentColor"/>
+                        </svg>
+                        <span class="guide-hero-sec__stat-value">4,99</span>
+                        <a href="#reviews" class="guide-hero-sec__stat-link">126 отзывов</a>
+                    </div>
+                </div>
+            </div>
+            <div class="guide-hero-sec__about">
+                <p class="guide-hero-sec__text">Я филолог, тележурналист и любитель рассказывать истории. Побродить маршрутами литературных героев, заглянуть в окна писательской квартиры, пообедать в заведении, где бывали гении. Узнать, кто же они — прототипы известных всему миру героев. Заглянуть в письма и воспоминания современников. Услышать такие подробности частной жизни великих людей, о которых вам никогда не расскажут учителя. Все это я предлагаю вам на своих маршрутах по «самому умышленному городу мира» — Литературному Петербургу.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="guide-tours-sec">
+    <div class="container">
+        <div class="guide-tours-sec__header">
+            <h2 class="guide-tours-sec__title">Экскурсии гида</h2>
+            <p class="guide-tours-sec__counter"><span>12</span> экскурсий</p>
+        </div>
+      
+
+        <div class="guide-tours-sec__wrapper">
+            {{> components/tour-card
+            img="/src/img/tour1.jpg"
+            title="Экскурсия 1"
+            description="Описание экскурсии 1"
+            }}
+
+            {{> components/tour-card
+            img="/src/img/tour2.jpg"
+            title="Экскурсия 2"
+            description="Описание экскурсии 2"
+            }}
+
+            {{> components/tour-card
+            img="/src/img/tour3.jpg"
+            title="Экскурсия 3"
+            description="Описание экскурсии 3"
+            }}
+
+            {{> components/tour-card
+            img="/src/img/tour5.jpg"
+            title="Экскурсия 5"
+            description="Описание экскурсии 5"
+            }}
+
+            {{> components/tour-card
+            img="/src/img/tour6.jpg"
+            title="Экскурсия 6"
+            description="Описание экскурсии 6"
+            }}
+
+            {{> components/tour-card
+            img="/src/img/tour2.jpg"
+            title="Экскурсия 2"
+            description="Описание экскурсии 2"
+            }}
+        </div>
+    </div>
+</section>
+
+<section class="reviews-sec guide-reviews-sec">
+    <div class="container">
+        <div class="reviews-sec__title">38 отзывов путешественников</div>
+        <div class="reviews-sec__wrapper">
+
+            {{> components/review
+            img="/src/img/tour1.jpg"
+            }}
+
+            {{> components/review
+            img="/src/img/tour2.jpg"
+            }}
+
+            {{> components/review
+            img="/src/img/tour3.jpg"
+            }}
+
+            {{> components/review
+            img="/src/img/tour6.jpg"
+            }}
+
+            {{> components/review
+            img="/src/img/tour5.jpg"
+            }}
+
+        </div>
+    </div>
+</section>
