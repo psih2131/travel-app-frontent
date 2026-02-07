@@ -12,10 +12,25 @@
         align-items: center;
     }
 }
+.opacityu-mod{
+    .header__nav-list {
+        li{
+            a{
+                color: $white;
+            }
+        }
+    }
+
+    .header__logo {
+        border-radius: 20px;
+        overflow: hidden;
+    }
+}
 
 .header__logo {
     width: 200px;
     display: block;
+
 }
 
 .header__logo-img {

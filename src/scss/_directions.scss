@@ -1,0 +1,55 @@
+.direction-page{
+    padding-top: 125px;
+    padding-bottom: 125px;
+}
+.direction-page__wrapper{
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    .direction-card{
+        width: calc(20% - 20px);
+        margin: 0 10px 20px 10px;
+    }
+}
+.direction-page__title{
+    font-size: 32px;
+    font-weight: 800;
+    color: $black1;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.popular-tours-sec{
+    padding-bottom: 125px;
+}
+.popular-tours-sec__title{
+    font-size: 32px;
+    font-weight: 800;
+    color: $black1;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 35px;
+}
+
+.popular-tours-sec__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    .tour-card{
+        width: calc(33.333% - 30px);
+        margin: 0 15px 30px 15px;
+    }
+}
+
+.directions-guide-sec{
+    padding-bottom: 125px;
+}
+.directions-reviews-sec{
+    padding-bottom: 125px;
+}
+.directions-blog-sec{
+    padding-bottom: 80px;
+}
