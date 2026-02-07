@@ -1,0 +1,30 @@
+.guides-page-sec{
+    padding-top: 125px;
+    padding-bottom: 125px;
+}
+.guides-page-sec__filtr-wrapper{
+    margin-top: 50px;
+    margin-bottom: 35px;
+}
+
+.guides-page-sec__filtr-title{
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1;
+}
+.guides-page-sec__filtr-row{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.guides-page-sec__list-people{
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    display: flex;
+    flex-wrap: wrap;
+    .guide-card-2{
+        width: calc(25% - 20px);
+        margin: 0 10px 20px 10px;
+    }
+}
