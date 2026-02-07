@@ -1,0 +1,96 @@
+.guide-card-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 20px;
+    background: $white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    transition: all ease 0.3s;
+
+    &:hover {
+        transform: scale(1.03);
+        transition: all ease 0.3s;
+    }
+}
+
+.guide-card-2__img-wrapper {
+    width: 100%;
+    height: 300px;
+    border-radius: 16px;
+    display: block;
+    object-fit: cover;
+}
+
+.guide-card-2__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+}
+
+.guide-card-2__data {
+    padding: 15px;
+}
+
+.guide-card-2__name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.guide-card-2__name-link {
+    color: $black1;
+    line-height: 1;
+}
+
+.guide-card-2__subtitle {
+    font-size: 14px;
+    margin-top: 5px;
+    color: $grey1;
+    line-height: 1.2;
+}
+
+.guide-card-2__desctiption {
+    font-size: 14px;
+    margin-top: 15px;
+    color: $grey1;
+}
+
+.guide-card-2__down {
+    padding: 0 15px 15px 15px;
+}
+
+.guide-card-2__rate-row {
+    display: flex;
+    align-items: center;
+}
+
+.guide-card-2__rate {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.guide-card-2__btn {
+    display: inline-block;
+    padding: 12px;
+    text-align: center;
+    color: $black1;
+    background: none;
+    font-size: 14px;
+    border-radius: 100px;
+    border: solid 2px $green1;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: all ease 0.3s;
+
+    &:hover {
+        background: $green1;
+        color: $white;
+        transition: all ease 0.3s;
+    }
+
+}

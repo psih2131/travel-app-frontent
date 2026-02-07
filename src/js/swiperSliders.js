@@ -59,6 +59,52 @@ function postSlider() {
 
 
 
+function guideSlider() {
+
+    const swiper = new Swiper(".guide-slider-swiper", {
+        modules: [Navigation, Pagination],
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 30,
+        speed: 700,
+        freeMode: {
+            enabled: true,
+            sticky: true,
+        },
+        slidesPerView: "auto",
+        scrollbar: { draggable: true },
+        navigation: {
+            nextEl: ".guide-swiper-button-next",
+            prevEl: ".guide-swiper-button-prev",
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            300: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+
+                // centeredSlides: true
+            },
+            // when window width is >= 320px
+
+            // when window width is >= 320px
+            780: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+            // when window width is >= 480px
+            1281: {
+                slidesPerView: 4,
+                spaceBetween: 0,
+            },
+
+        }
+
+    });
+}
 
 
-export { postSlider }
+
+
+
+export { postSlider, guideSlider }

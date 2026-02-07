@@ -1,6 +1,6 @@
 import '../scss/main.scss'
 
-import { postSlider } from "./swiperSliders.js";
+import { postSlider, guideSlider } from "./swiperSliders.js";
 
 import { galeryTour } from "./galeryTour.js";
 
@@ -15,4 +15,6 @@ acordeon()
 funcyBox()
 
 acordeonProgram()
+
+guideSlider()
 
