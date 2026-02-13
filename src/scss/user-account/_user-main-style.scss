@@ -5,6 +5,7 @@
     padding-bottom: 120px;
     background: $lightGrey1;
     min-height: 100vh;    
+    overflow: visible;
 
 
 }
@@ -12,6 +13,7 @@
 .user-account__inner {
     display: flex;
     gap: 24px;
+    position: relative;
   
 }
 

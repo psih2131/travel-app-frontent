@@ -1,0 +1,33 @@
+<article class="user-order-card user-order-card--{{statusModifier}}">
+    <div class="user-order-card__user">
+        <div class="user-order-card__avatar-wrap">
+            <img class="user-order-card__avatar" src="{{avatar}}" alt="{{userName}}" width="40" height="40">
+        </div>
+        <div class="user-order-card__user-info">
+            <p class="user-order-card__user-name">{{userName}}</p>
+        </div>
+    </div>
+
+    <div class="user-order-card__tour">
+        <p class="user-order-card__tour-title">{{tourTitle}}</p>
+        <p class="user-order-card__tour-subtitle">{{tourSubtitle}}</p>
+    </div>
+
+    <div class="user-order-card__date">
+        <p class="user-order-card__date-main">{{dateMain}}</p>
+        <p class="user-order-card__date-sub">{{dateSub}}</p>
+    </div>
+
+    <div class="user-order-card__people">
+        <span class="user-order-card__people-count">{{peopleCount}}</span>
+        <span class="user-order-card__people-label">гостя</span>
+    </div>
+
+    <div class="user-order-card__price">
+        <span class="user-order-card__price-value">{{priceValue}}</span>
+    </div>
+
+    <div class="user-order-card__status-wrap">
+        <button type="button" class="user-order-card__status user-order-card__status--{{statusModifier}}">{{statusText}}</button>
+    </div>
+</article>
