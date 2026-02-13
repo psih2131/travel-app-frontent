@@ -1,0 +1,148 @@
+<section class="user-account">
+    <div class="container">
+        <div class="user-account__inner">
+            {{> pages/user-account/aside }}
+
+            <div class="user-account__about-user">
+                <div class="user-profile-card">
+                    <div class="user-profile-card__avatar-wrap">
+                        <img class="user-profile-card__avatar" src="/src/img/user1.webp" alt="Аватар" width="120" height="120" />
+                        <button type="button" class="user-profile-card__edit-avatar" aria-label="Изменить фото">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                        </button>
+                    </div>
+                    <p class="user-profile-card__name">Roland Donald</p>
+                    <div class="user-profile-card__tabs">
+                        <button type="button" class="user-profile-card__tab user-profile-card__tab--active">
+                            <span class="user-profile-card__tab-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            </span>
+                            Личные данные
+                        </button>
+                        <button type="button" class="user-profile-card__tab">
+                            <span class="user-profile-card__tab-icon" aria-hidden="true">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            </span>
+                            Логин и пароль
+                        </button>
+                    </div>
+                </div>
+
+                <div class="user-account__tab-contents">
+                    <div class="user-account__tab-content user-account__tab-content--active">
+                <div class="user-profile-form-wrap">
+                    <h2 class="user-profile-form-wrap__title">Личные данные</h2>
+                    <form class="user-profile-form">
+                        <div class="user-profile-form__field user-profile-form__field--radio user-profile-form__field--full">
+                            <p class="user-profile-form__label">Пол</p>
+                            <div class="user-profile-form__radios">
+                                <label class="user-profile-form__radio-label">
+                                    <input type="radio" name="gender" value="male" checked class="user-profile-form__radio" />
+                                    <span>Мужской</span>
+                                </label>
+                                <label class="user-profile-form__radio-label">
+                                    <input type="radio" name="gender" value="female" class="user-profile-form__radio" />
+                                    <span>Женский</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="user-profile-form__field user-profile-form__field--full">
+                            <label class="user-profile-form__label" for="profile-firstname">Имя</label>
+                            <input class="user-profile-form__input" id="profile-firstname" type="text" value="Roland" />
+                        </div>
+                        <div class="user-profile-form__field user-profile-form__field--full">
+                            <label class="user-profile-form__label" for="profile-lastname">Фамилия</label>
+                            <input class="user-profile-form__input" id="profile-lastname" type="text" value="Donald" />
+                        </div>
+                        <div class="user-profile-form__field">
+                            <label class="user-profile-form__label" for="profile-email">Email</label>
+                            <div class="user-profile-form__input-row">
+                                <input class="user-profile-form__input" id="profile-email" type="email" value="rolandDonald@mail.com" />
+                                <span class="user-profile-form__verified">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                    Подтверждён
+                                </span>
+                            </div>
+                        </div>
+                        <div class="user-profile-form__field">
+                            <label class="user-profile-form__label" for="profile-address">Адрес</label>
+                            <input class="user-profile-form__input" id="profile-address" type="text" value="3605 Parker Rd." />
+                        </div>
+                        <div class="user-profile-form__field">
+                            <label class="user-profile-form__label" for="profile-phone">Номер телефона</label>
+                            <input class="user-profile-form__input" id="profile-phone" type="tel" value="(405) 555-0128" />
+                        </div>
+                        <div class="user-profile-form__field">
+                            <label class="user-profile-form__label" for="profile-birthdate">Дата рождения</label>
+                            <div class="user-profile-form__input-wrap">
+                                <input class="user-profile-form__input" id="profile-birthdate" type="text" value="1 фев, 1995" />
+                                <span class="user-profile-form__input-icon" aria-hidden="true">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="user-profile-form__field">
+                            <label class="user-profile-form__label" for="profile-location">Город</label>
+                            <div class="user-profile-form__input-wrap user-profile-form__input-wrap--select">
+                                <input class="user-profile-form__input" id="profile-location" type="text" value="Атланта, США" readonly />
+                                <span class="user-profile-form__input-icon user-profile-form__input-icon--chevron" aria-hidden="true">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="user-profile-form__field">
+                            <label class="user-profile-form__label" for="profile-postal">Почтовый индекс</label>
+                            <input class="user-profile-form__input" id="profile-postal" type="text" value="30301" />
+                        </div>
+                        <div class="user-profile-form__actions">
+                            <button type="button" class="user-profile-form__btn user-profile-form__btn--secondary">Отменить</button>
+                            <button type="submit" class="user-profile-form__btn user-profile-form__btn--primary">Сохранить</button>
+                        </div>
+                    </form>
+                </div>
+                    </div>
+
+                    <div class="user-account__tab-content">
+                        <div class="user-profile-form-wrap">
+                            <h2 class="user-profile-form-wrap__title">Логин и пароль</h2>
+                            <p class="user-profile-form-wrap__lead">Хотите сменить пароль?</p>
+                            <form class="user-profile-form user-profile-form--password">
+                                <div class="user-profile-form__field user-profile-form__field--full">
+                                    <label class="user-profile-form__label" for="profile-current-password">Введите текущий пароль</label>
+                                    <div class="auth-form__input-wrap">
+                                        <input class="user-profile-form__input auth-form__input" id="profile-current-password" type="password" placeholder="••••••••" />
+                                        <button class="auth-form__toggle-password" type="button" aria-label="Показать пароль">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="user-profile-form__field user-profile-form__field--full">
+                                    <label class="user-profile-form__label" for="profile-new-password">Введите новый пароль</label>
+                                    <div class="auth-form__input-wrap">
+                                        <input class="user-profile-form__input auth-form__input" id="profile-new-password" type="password" placeholder="••••••••" />
+                                        <button class="auth-form__toggle-password" type="button" aria-label="Показать пароль">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="user-profile-form__field user-profile-form__field--full">
+                                    <label class="user-profile-form__label" for="profile-repeat-password">Повторите пароль</label>
+                                    <div class="auth-form__input-wrap">
+                                        <input class="user-profile-form__input auth-form__input" id="profile-repeat-password" type="password" placeholder="••••••••" />
+                                        <button class="auth-form__toggle-password" type="button" aria-label="Показать пароль">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="user-profile-form__actions">
+                                    <a class="user-profile-form__link user-profile-form__forgot-link" href="#" data-engram-button="recovery">Забыл пароль</a>
+                                    <button type="submit" class="user-profile-form__btn user-profile-form__btn--primary">Сменить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

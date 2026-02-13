@@ -1,0 +1,39 @@
+@import "../vars";
+
+.user-account {
+    padding-top:150px;
+    padding-bottom: 120px;
+    background: $lightGrey1;
+    min-height: 100vh;    
+
+
+}
+
+.user-account__inner {
+    display: flex;
+    gap: 24px;
+  
+}
+
+.user-account__about-user {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.user-account__tab-contents {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+}
+
+.user-account__tab-content {
+    display: none;
+    height: 100%;
+
+    &--active {
+        display: block;
+    }
+}

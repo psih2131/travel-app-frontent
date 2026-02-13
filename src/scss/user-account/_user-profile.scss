@@ -1,0 +1,289 @@
+/* Карточка профиля (левая узкая колонка) */
+.user-profile-card {
+    flex-shrink: 0;
+    width: 280px;
+    background: $white;
+    border-radius: 20px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.user-profile-card__avatar-wrap {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 16px;
+}
+
+.user-profile-card__avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: $grey1;
+}
+
+.user-profile-card__edit-avatar {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: $green1;
+    color: $white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.user-profile-card__name {
+    font-size: 18px;
+    font-weight: 600;
+    color: $black1;
+    margin: 0 0 20px;
+}
+
+.user-profile-card__tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.user-profile-card__tab {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 14px;
+    color: $black1;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s, color 0.2s;
+
+    &:hover {
+        background: rgba(93, 184, 166, 0.1);
+        color: $green1;
+    }
+
+    &--active {
+        background: $green1;
+        color: $white;
+    }
+}
+
+.user-profile-card__tab-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+
+    svg {
+        display: block;
+    }
+}
+
+/* Правая часть — форма */
+.user-profile-form-wrap {
+    flex: 1;
+    height: 100%;
+    min-width: 0;
+    background: $white;
+    border-radius: 20px;
+    padding: 32px 32px 28px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.user-profile-form-wrap__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $black1;
+    margin: 0 0 24px;
+}
+
+.user-profile-form-wrap__lead {
+    font-size: 14px;
+    color: $grey1;
+    margin: 0 0 20px;
+}
+
+.user-profile-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 24px;
+    row-gap: 20px;
+}
+
+.user-profile-form__field {
+    margin-bottom: 0;
+}
+
+.user-profile-form__field--full {
+    grid-column: 1 / -1;
+}
+
+.user-profile-form__label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: $black1;
+    margin-bottom: 8px;
+}
+
+.user-profile-form__radios {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.user-profile-form__radio-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: $black1;
+    cursor: pointer;
+
+    input {
+        accent-color: $green1;
+        cursor: pointer;
+    }
+}
+
+.user-profile-form__input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    background: $lightGrey1;
+    border: 1px solid transparent;
+    font-size: 14px;
+    color: $black1;
+    box-sizing: border-box;
+
+    &::placeholder {
+        color: $grey1;
+    }
+
+    &:focus {
+        outline: none;
+        border-color: $green1;
+        background: $white;
+    }
+}
+
+.user-profile-form__input-wrap {
+    position: relative;
+
+    .user-profile-form__input {
+        padding-right: 44px;
+    }
+}
+
+.user-profile-form__input-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $grey1;
+    pointer-events: none;
+
+    &--chevron {
+        pointer-events: auto;
+        cursor: pointer;
+    }
+}
+
+.user-profile-form__input-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.user-profile-form__input-row .user-profile-form__input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.user-profile-form__verified {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: $green1;
+    flex-shrink: 0;
+}
+
+.user-profile-form__actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+    grid-column: 1 / -1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.user-profile-form__forgot-link {
+    margin-right: auto;
+    font-size: 14px;
+    color: $green1;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.user-profile-form--password {
+    width: 100%;
+
+    .auth-form__input-wrap {
+        .user-profile-form__input {
+            padding-right: 44px;
+        }
+    }
+}
+
+.user-profile-form__btn {
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+
+    &--primary {
+        background: $green1;
+        color: $white;
+        border: none;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    &--secondary {
+        background: $white;
+        color: $green1;
+        border: 1px solid $green1;
+
+        &:hover {
+            background: rgba(93, 184, 166, 0.08);
+        }
+    }
+}
