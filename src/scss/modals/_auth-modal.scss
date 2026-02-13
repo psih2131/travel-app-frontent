@@ -1,0 +1,256 @@
+.engram-popup{
+    top: -100px!important;
+}
+.auth-popup {
+    width: 400px !important;
+    border: solid 1px #E5E5E5;
+    top: 300px;
+
+    .engram-popup__close {
+        right: 10px;
+        top: 10px;
+        background: $white;
+        border: solid 1px #E5E5E5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        background: none;
+        border: none;
+
+        &::before {
+            width: 24px;
+            height: 24px;
+            content: "";
+            position: absolute;
+            background-image: url('/src/img/icons/close.svg');
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}
+
+.modal-popup__title {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.modal-popup__subtitle {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    color: $grey1;
+}
+
+.auth-form {
+    margin-top: 24px;
+}
+
+.auth-form__field {
+    margin-bottom: 16px;
+}
+
+.auth-form__label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: $black1;
+    margin-bottom: 6px;
+}
+
+.auth-form__input-wrap {
+    position: relative;
+}
+
+.auth-form__input {
+    width: 100%;
+    padding: 12px 40px 12px 14px;
+    border-radius: 8px;
+    background: $lightGrey1;
+    border: none;
+    font-size: 14px;
+    color: $black1;
+    box-sizing: border-box;
+
+    &::placeholder {
+        color: $grey1;
+    }
+}
+
+.auth-form__toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    border: none;
+    background: none;
+    color: $grey1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--active {
+        color: $green1;
+    }
+}
+
+.auth-form__hint {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 6px;
+    font-size: 12px;
+    color: $orange1;
+}
+
+.auth-form__hint-icon {
+    flex-shrink: 0;
+}
+
+.auth-form__agree {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: $black1;
+    cursor: pointer;
+
+    .auth-form__link {
+        display: inline;
+        margin-top: 0;
+        text-align: left;
+    }
+}
+
+.auth-form__checkbox {
+    margin-top: 4px;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    accent-color: $green1;
+    cursor: pointer;
+}
+
+.auth-btn {
+    width: 100%;
+    border-radius: 8px;
+    color: $white;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.auth-btn--primary {
+    background: $green1;
+    margin-top: 8px;
+}
+
+.auth-form__link {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    font-size: 14px;
+    color: $green1;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.auth-form__separator {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: $grey1;
+    margin: 24px 0 16px;
+
+    &::before,
+    &::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: #E5E5E5;
+    }
+}
+
+.modal-popup__buttons-list {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.auth-btn--social {
+    background: $lightGrey1;
+    color: $black1;
+}
+
+.auth-btn__icon {
+    flex-shrink: 0;
+}
+
+.auth-form__signup {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: $black1;
+
+    .auth-form__link {
+        display: inline;
+        margin-top: 0;
+    }
+}
+
+.modal-popup__confirm-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: $green1;
+
+    svg {
+        display: block;
+        width: 60px;
+        height: auto;
+    }
+}
+
+.modal-popup__confirm-text {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: $black1;
+}
+
+@media only screen and (max-width: 780px) {
+    .auth-popup {
+        width: 350px !important;
+    }
+
+    .modal-popup__confirm-icon {
+        width: 80px;
+        height: 80px;
+
+        svg {
+            width: 50px;
+
+        }
+    }
+}

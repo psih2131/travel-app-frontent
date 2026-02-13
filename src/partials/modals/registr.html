@@ -1,0 +1,48 @@
+<div class="modal-popup auth-popup registr-popup" data-engram-popup="registr">
+
+    <div class="modal-popup__auth-claster">
+        <p class="modal-popup__title">Создать аккаунт</p>
+        <p class="modal-popup__subtitle">Заполните форму для регистрации</p>
+
+        <form class="auth-form">
+            <div class="auth-form__field">
+                <label class="auth-form__label" for="registr-name">Полное имя</label>
+                <input class="auth-form__input" id="registr-name" type="text" placeholder="Иван Иванов" />
+            </div>
+            <div class="auth-form__field">
+                <label class="auth-form__label" for="registr-email">Рабочий email</label>
+                <input class="auth-form__input" id="registr-email" type="email" placeholder="nathan.roberts@example.com" />
+                <p class="auth-form__hint">
+                    <svg class="auth-form__hint-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Используйте рабочий email
+                </p>
+            </div>
+            <div class="auth-form__field">
+                <label class="auth-form__label" for="registr-password">Пароль</label>
+                <div class="auth-form__input-wrap">
+                    <input class="auth-form__input" id="registr-password" type="password" placeholder="••••••••••••" />
+                    <button class="auth-form__toggle-password" type="button" aria-label="Показать пароль">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="auth-form__field">
+                <label class="auth-form__label" for="registr-password-confirm">Подтвердите пароль</label>
+                <div class="auth-form__input-wrap">
+                    <input class="auth-form__input" id="registr-password-confirm" type="password" placeholder="••••••••••••" />
+                    <button class="auth-form__toggle-password" type="button" aria-label="Показать пароль">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="auth-form__field">
+                <label class="auth-form__agree">
+                    <input type="checkbox" name="agree" class="auth-form__checkbox" checked />
+                    <span>Я согласен с <a class="auth-form__link" href="#">Условиями использования</a> и <a class="auth-form__link" href="#">Политикой конфиденциальности</a></span>
+                </label>
+            </div>
+            <button class="auth-btn auth-btn--primary" type="submit">Создать аккаунт</button>
+        </form>
+    </div>
+
+</div>
