@@ -107,3 +107,32 @@
     line-height: 1.3;
     color: $grey1;
 }
+
+
+@media only screen and (max-width: 760px) {
+    .review{
+        flex-wrap: wrap;
+        border-radius: 10px;
+    }
+    .review__img-wrapper{
+        display: none;
+    }
+    .review__body{
+        width: 100%;
+    }
+    .review__user-data-row{
+        flex-wrap: wrap;
+    }
+    .review__date{
+        margin-top: 10px;
+        width: 100%;
+      padding: 0;
+    }
+    .review__body{
+        padding: 0;
+    }
+    .review{
+        padding: 15px;
+    }
+    
+}

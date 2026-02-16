@@ -30,28 +30,22 @@ function postSlider() {
         breakpoints: {
             // when window width is >= 320px
             300: {
-                slidesPerView: "auto",
+                slidesPerView: 1,
                 spaceBetween: 0,
+                slidesOffsetBefore: 0,
+                freeMode: false,
 
                 // centeredSlides: true
             },
             // when window width is >= 320px
 
             // when window width is >= 320px
-            780: {
+            760: {
                 slidesPerView: "auto",
                 spaceBetween: 0,
+                slidesOffsetBefore: +currentPadding,
             },
-            // when window width is >= 480px
-            1281: {
-                slidesPerView: "auto",
-                spaceBetween: 0,
-            },
-            // when window width is >= 640px
-            1540: {
-                slidesPerView: "auto",
-                spaceBetween: 0,
-            }
+
         }
 
     });

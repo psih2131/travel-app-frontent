@@ -123,3 +123,41 @@
         display: block;
     }
 }
+
+@media only screen and (max-width: 760px) {
+    .guide-card{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .guide-card__data{
+        display: contents;
+    }
+    .guide-card__img-wrapper{
+        width: 100px;
+        height: 100px;
+    }
+    .guide-card__main-info{
+        width: calc(100% - 100px);
+        padding-left: 15px;
+    }
+    .guide-card__description{
+        padding: 15px;
+    }
+    .guide-card__btn-wrapper{
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+    .guide-card__btn{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .guide-card__btn-text{
+        width: calc(100% - 40px);
+        text-align: center;
+    }
+    .guide-card__btn-icon{
+        margin-left: 0;
+    }
+}

@@ -211,3 +211,123 @@
         }
     }
 }
+
+
+@media only screen and (max-width: 1250px) {
+    .tours-hero-sec__title{
+        font-size: 34px; line-height: 1.2;
+    }
+    .tours-hero-sec__tegs-title{
+        font-size: 22px; line-height: 1.2;
+    }
+    .tours-hero-sec__all-tours-title{
+        font-size: 30px;
+        line-height: 1.2;
+    }
+    .tours-hero-sec{
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+    .tours-hero-sec__all-tours-wrapper{
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-between;
+        .tour-card{
+            width: calc(50% - 15px);
+            margin: 0 0 30px 0;
+        }
+    }
+    .guide-sec__title{
+        font-size: 30px;
+    }
+    .guide-sec__wrapper .guide-card{
+        width: 100%;
+    }
+    .guide-sec{
+        padding-bottom: 100px;
+    }
+    .guide-sec__wrapper .guide-card:nth-last-child(2){
+        margin-bottom: 30px;
+    }
+    .reviews-sec__title{
+        font-size: 30px;
+    }
+    .reviews-sec{
+        padding-bottom: 100px;
+    }
+
+    .sec-title{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .tours-hero-sec__title{
+        font-size: 26px;
+    }
+    .tours-hero-sec__teg{
+        font-size: 12px;
+        line-height: 1;
+    }.tours-hero-sec__tegs-wrapper{
+        margin-bottom: 40px;
+    }
+    .tours-hero-sec__all-tours-title{
+        font-size: 24px;
+    }
+    .tours-hero-sec__all-tours-subtitle{
+        font-size: 14px;
+    }
+    .tours-hero-sec__all-tours-wrapper .tour-card{
+        width: 100%;
+    }
+    .tours-hero-sec{
+        padding-bottom: 40px;
+    }
+    .guide-sec__title{
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+    .guide-sec{
+        padding-bottom: 70px;
+    }
+    .reviews-sec__title{
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+    .reviews-sec{
+        padding-bottom: 70px;
+    }
+    .reviews-sec__wrapper .review{
+        margin-bottom: 20px;
+    }
+    .reviews-sec__wrapper .review:last-child{
+        margin-bottom: 0;
+    }
+    .reviews-sec__wrapper .review:nth-child(2n){
+        margin-bottom: 0;
+    }
+
+    .sec-title{
+        font-size: 25px;
+    }
+
+    .directions-blog-sec{
+        padding-bottom: 60px;
+    }
+    .reviews-sec__wrapper .review:nth-child(2n){
+        margin-bottom: 20px;
+    }
+    .directions-blog-sec{
+        .sec-header__btn{
+            display: none;
+        }
+    }
+    
+}
+
+
+@media only screen and (max-width: 375px) {
+
+}
