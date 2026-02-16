@@ -1,0 +1,57 @@
+@import "../vars";
+
+.user-account__user-be-guide {
+    flex: 1;
+    min-width: 0;
+    background: $white;
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.be-guide-block {
+    max-width: 560px;
+}
+
+.be-guide-block__title {
+    font-size: 22px;
+    font-weight: 600;
+    color: $black1;
+    margin: 0 0 12px;
+}
+
+.be-guide-block__subtitle {
+    font-size: 15px;
+    line-height: 1.5;
+    color: $grey1;
+    margin: 0 0 24px;
+}
+
+.be-guide-block__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: $white;
+    background: $green1;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.be-guide-block__btn:hover {
+    opacity: 0.9;
+}
+
+.be-guide-block__btn-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+}
+
+.be-guide-block__btn-icon svg {
+    display: block;
+}
