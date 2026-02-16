@@ -18,7 +18,7 @@ import { faqAccordion } from "./faqAccordion.js";
 
 import { heroSearch } from "./heroSearch.js";
 
-import { initBaseScripts } from "./base-scripts.js";
+import { initBaseScripts, openMobileMenu } from "./base-scripts.js";
 
 import { initUserAccountTabs } from "./user-account-scripts.js";
 
@@ -28,6 +28,8 @@ window.popupApi = popup(true, 'dark');
 
 //helpers
 hideShowPassword()
+
+openMobileMenu()
 
 initBaseScripts()
 
