@@ -249,3 +249,79 @@
     font-size: 12px;
     user-select: none;
 }
+
+
+@media only screen and (max-width: 1250px) {
+    .footer__grid{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .footer__col{
+        width: calc(33.333% - 16px);
+    }
+    .footer__brand{
+        width: calc(66.666% - 16px);
+    }
+    .footer__tagline{
+        max-width: 100%;
+    }
+    .footer__top{
+        padding: 40px 0;
+    }
+    .footer__bottom-inner{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .footer__top{
+        padding: 30px 0;
+    }
+    .footer__brand{
+        width: 100%;
+        .footer__col-title{
+            display: none;
+        }
+    }
+    .footer__col{
+        width: calc(100%);
+    }
+    .footer__links{
+        column-count: 2;
+
+        display: block;
+
+        li{
+            margin-bottom: 10px;
+        }
+    }
+    .footer__col--subscribe{
+        width: 100%;
+        max-width: 100%;
+    }
+    .footer__subscribe-form{
+        width: 100%;
+    }
+    .footer__copy{
+        width: 100%;
+        text-align: center;
+    }
+    .footer__payments{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+
+    }
+    .footer__legal-sep{
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 375px) {
+
+}
