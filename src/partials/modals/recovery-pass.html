@@ -1,7 +1,9 @@
-<div class="modal-popup auth-popup recovery-popup" data-engram-popup="recovery">
-
-    <div class="modal-popup__auth-claster">
-        <p class="modal-popup__title">Восстановление пароля</p>
+<div id="recovery" class="modal" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container modal-popup auth-popup recovery-popup" role="dialog" aria-modal="true" aria-labelledby="recovery-title">
+            <button type="button" class="engram-popup__close" data-micromodal-close aria-label="Закрыть"></button>
+            <div class="modal-popup__auth-claster">
+                <p class="modal-popup__title" id="recovery-title">Восстановление пароля</p>
         <p class="modal-popup__subtitle">Введите email — мы отправим ссылку для сброса пароля</p>
 
         <form class="auth-form">
@@ -15,6 +17,7 @@
         <p class="auth-form__signup">
             Вспомнили пароль? <span class="auth-form__link" data-engram-button="auth">Войти</span>
         </p>
+            </div>
+        </div>
     </div>
-
 </div>

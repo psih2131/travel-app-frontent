@@ -1,8 +1,6 @@
 import '../scss/main.scss'
 
-import { popup } from 'engram-popup';
-
-import 'engram-popup/dist/index.css';
+import { initModals } from "./modals.js";
 
 import { hideShowPassword } from "./helpers-scripts.js";
 
@@ -23,7 +21,7 @@ import { initBaseScripts, openMobileMenu } from "./base-scripts.js";
 import { initUserAccountTabs } from "./user-account-scripts.js";
 
 
-window.popupApi = popup(true, 'dark');
+initModals();
 
 
 //helpers

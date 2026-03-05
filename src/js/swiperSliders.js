@@ -5,10 +5,13 @@ import { Navigation, Pagination, FreeMode, Scrollbar } from 'swiper/modules';
 
 
 function postSlider() {
-    let currentPadding
-    let container = document.querySelector('.container').offsetWidth
-    let windowsWidth = window.innerWidth;
-    currentPadding = (+windowsWidth - +container - 30) / 2
+    const sliderEl = document.querySelector(".post-slider-swiper");
+    if (!sliderEl) return;
+
+    const containerEl = document.querySelector('.container');
+    const container = containerEl ? containerEl.offsetWidth : window.innerWidth;
+    const windowsWidth = window.innerWidth;
+    const currentPadding = (+windowsWidth - +container - 30) / 2;
 
     const swiper = new Swiper(".post-slider-swiper", {
         modules: [Navigation, Pagination],
@@ -54,6 +57,7 @@ function postSlider() {
 
 
 function guideSlider() {
+    if (!document.querySelector(".guide-slider-swiper")) return;
 
     const swiper = new Swiper(".guide-slider-swiper", {
         modules: [Navigation, Pagination],
@@ -102,6 +106,8 @@ function guideSlider() {
 
 
 function reviewsSlider() {
+    if (!document.querySelector(".reviews-slider-swiper")) return;
+
     const swiper = new Swiper(".reviews-slider-swiper", {
         modules: [Navigation],
         loop: true,

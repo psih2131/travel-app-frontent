@@ -1,7 +1,9 @@
-<div class="modal-popup auth-popup registr-popup" data-engram-popup="registr">
-
-    <div class="modal-popup__auth-claster">
-        <p class="modal-popup__title">Создать аккаунт</p>
+<div id="registr" class="modal" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container modal-popup auth-popup registr-popup" role="dialog" aria-modal="true" aria-labelledby="registr-title">
+            <button type="button" class="engram-popup__close" data-micromodal-close aria-label="Закрыть"></button>
+            <div class="modal-popup__auth-claster">
+                <p class="modal-popup__title" id="registr-title">Создать аккаунт</p>
         <p class="modal-popup__subtitle">Заполните форму для регистрации</p>
 
         <form class="auth-form">
@@ -43,6 +45,7 @@
             </div>
             <button class="auth-btn auth-btn--primary" type="submit">Создать аккаунт</button>
         </form>
+            </div>
+        </div>
     </div>
-
 </div>

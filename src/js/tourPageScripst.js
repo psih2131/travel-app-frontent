@@ -7,12 +7,11 @@ function acordeon() {
 
     if (orgDetAcordeon?.length > 0) {
         orgDetAcordeon.forEach(el => {
-
-            el.querySelector('.org-det__element-header').addEventListener('click', function () {
+            const header = el.querySelector('.org-det__element-header');
+            if (!header) return;
+            header.addEventListener('click', function () {
                 slideToggle(el.querySelector('.org-det__element-body'));
-                console.log('gg')
-            })
-
+            });
         })
     }
 
@@ -23,12 +22,11 @@ function acordeonProgram() {
 
     if (orgDetAcordeon?.length > 0) {
         orgDetAcordeon.forEach(el => {
-
-            el.querySelector('.program-tour__acordeon-header').addEventListener('click', function () {
+            const header = el.querySelector('.program-tour__acordeon-header');
+            if (!header) return;
+            header.addEventListener('click', function () {
                 slideToggle(el.querySelector('.program-tour__acordeon-body'));
-                console.log('gg')
-            })
-
+            });
         })
     }
 

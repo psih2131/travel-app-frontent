@@ -1,14 +1,45 @@
-.engram-popup{
-    top: -100px!important;
+/* Micromodal: контейнер и оверлей */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+
+    &.is-open {
+        display: flex;
+    }
 }
+
+.modal__overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__container {
+    position: relative;
+    margin: auto;
+    cursor: default;
+    background: $white;
+    border-radius: 12px;
+    padding: 30px;
+}
+
 .auth-popup {
     width: 400px !important;
     border: solid 1px #E5E5E5;
-    top: 300px;
 
     .engram-popup__close {
-        right: 10px;
-        top: 10px;
+        position: absolute;
+        right: 30px;
+        top: 30px;
         background: $white;
         border: solid 1px #E5E5E5;
         display: flex;
@@ -18,6 +49,7 @@
         height: 24px;
         background: none;
         border: none;
+        cursor: pointer;
 
         &::before {
             width: 24px;

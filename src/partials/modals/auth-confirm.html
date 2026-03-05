@@ -1,6 +1,8 @@
-<div class="modal-popup auth-popup" data-engram-popup="auth-confirm">
-
-    <div class="modal-popup__confirm">
+<div id="auth-confirm" class="modal" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container modal-popup auth-popup" role="dialog" aria-modal="true" aria-labelledby="auth-confirm-title">
+            <button type="button" class="engram-popup__close" data-micromodal-close aria-label="Закрыть"></button>
+            <div class="modal-popup__confirm">
         <div class="modal-popup__confirm-icon">
             <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -11,15 +13,16 @@
                     fill="#74E8AE" />
             </svg>
         </div>
-        <p class="modal-popup__confirm-text">Успешная авторизация</p>
-    </div>
+        <p class="modal-popup__confirm-text" id="auth-confirm-title">Успешная авторизация</p>
+            </div>
 
-    <div class="modal-popup__auth-claster">
-        <p class="modal-popup__title">Авторизация</p>
+            <div class="modal-popup__auth-claster">
+                <p class="modal-popup__title">Авторизация</p>
         <p class="modal-popup__subtitle">Войдите в аккаун испульзуя логин и пароль</p>
         <div class="modal-popup__buttons-list">
     
         </div>
+            </div>
+        </div>
     </div>
-
 </div>

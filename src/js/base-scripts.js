@@ -9,12 +9,12 @@ function initBaseScripts() {
 function openMobileMenu() {
     const burgerMenuBtn = document.querySelector('.burger-menu-btn');
     const mobileMenu = document.querySelector('.header-mobile-menu');
-    
+    if (!burgerMenuBtn || !mobileMenu) return;
+
     burgerMenuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('active');
         burgerMenuBtn.classList.toggle('active');
     });
-
 }
 
 function headerOpacityOnHome() {
