@@ -155,32 +155,29 @@
             <div class="tour-info-sec__main">
                 <nav class="tour-info-sec__fixed-nav">
                     <ul class="tour-info-sec__fixed-nav-list">
-                        <li class="tour-info-sec__fixed-nav-list-element">
+                        <!-- <li class="tour-info-sec__fixed-nav-list-element">
                             <a href="#tour-description">Что вас ждет</a>
-                        </li>
-
+                        </li> -->
                         <li class="tour-info-sec__fixed-nav-list-element">
-                            <a href="#org-det">Орг. детал</a>
+                            <a href="#org-det">Орг. детали</a>
                         </li>
-
                         <li class="tour-info-sec__fixed-nav-list-element">
                             <a href="#tour-living">Проживание</a>
                         </li>
-
                         <li class="tour-info-sec__fixed-nav-list-element">
-                            <a href="">Программа</a>
+                            <a href="#tour-program">Программа</a>
                         </li>
-
                         <li class="tour-info-sec__fixed-nav-list-element">
-                            <a href="">Что включено</a>
+                            <a href="#tour-payment-includes">Что включено</a>
                         </li>
-
                         <li class="tour-info-sec__fixed-nav-list-element">
-                            <a href="">Даты</a>
+                            <a href="#tour-available-dates">Даты</a>
                         </li>
-
                         <li class="tour-info-sec__fixed-nav-list-element">
-                            <a href="">Организатор</a>
+                            <a href="#tour-organizer">Организатор</a>
+                        </li>
+                        <li class="tour-info-sec__fixed-nav-list-element">
+                            <a href="#tour-reviews">Отзывы 5</a>
                         </li>
                     </ul>
                 </nav>
@@ -195,6 +192,17 @@
 
                     {{> components/tour-clusters/program }}
 
+                    {{> components/tour-clusters/useful-info }}
+
+                    {{> components/tour-clusters/payment-includes }}
+
+                    {{> components/tour-clusters/booking-conditions }}
+
+                    {{> components/tour-clusters/available-dates }}
+
+                    {{> components/tour-clusters/tour-organizer }}
+
+                    {{> components/tour-clusters/tour-reviews }}
 
                 </div>
 

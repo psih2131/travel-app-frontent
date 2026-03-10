@@ -1,0 +1,97 @@
+.tour-available-dates {
+    padding-bottom: 50px;
+}
+
+.tour-available-dates__title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.tour-available-dates__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.tour-available-dates__card {
+    padding: 16px 18px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    &:hover {
+        border-color: $green1;
+        background: rgba(93, 184, 166, 0.04);
+    }
+
+    &--selected {
+        border-color: $green1;
+        background: rgba(93, 184, 166, 0.08);
+    }
+}
+
+.tour-available-dates__date {
+    font-size: 15px;
+    font-weight: 500;
+    color: $black1;
+    margin: 0 0 6px 0;
+}
+
+.tour-available-dates__price {
+    font-size: 16px;
+    font-weight: 600;
+    color: $green1;
+    margin: 0;
+}
+
+.tour-available-dates__actions {
+  width: 100%;
+  .offer-reserve-btn{
+    width: 300px;
+  }
+}
+
+.tour-available-dates__btn {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 14px 20px;
+}
+
+.tour-available-dates__note {
+    font-size: 14px;
+    color: $grey1;
+    width: 100%;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.tour-available-dates__link {
+    color: $green1;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.25s ease;
+
+    &:hover {
+        color: darken($green1, 10%);
+    }
+}
+
+@media (max-width: 768px) {
+    .tour-available-dates__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .tour-available-dates__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tour-available-dates__actions {
+        max-width: 100%;
+    }
+}

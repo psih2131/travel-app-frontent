@@ -8,7 +8,7 @@ import { postSlider, guideSlider, reviewsSlider } from "./swiperSliders.js";
 
 import { galeryTour } from "./galeryTour.js";
 
-import { acordeon, funcyBox, acordeonProgram } from "./tourPageScripst.js";
+import { acordeon, funcyBox, acordeonProgram, tourReviewsAccordion } from "./tourPageScripst.js";
 
 import { reviewCardTruncate } from "./reviewCardTruncate.js";
 
@@ -40,6 +40,8 @@ acordeon()
 funcyBox()
 
 acordeonProgram()
+
+tourReviewsAccordion()
 
 guideSlider()
 

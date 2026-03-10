@@ -1,0 +1,81 @@
+<div class="tour-available-dates" id="tour-available-dates">
+    <h2 class="tour-available-dates__title">Доступные даты</h2>
+    <div class="tour-available-dates__grid">
+        <div class="tour-available-dates__card">
+            <p class="tour-available-dates__date">15–18 мар (вс-ср)</p>
+            <p class="tour-available-dates__price">€ 3609</p>
+        </div>
+        <div class="tour-available-dates__card">
+            <p class="tour-available-dates__date">16–19 мар (пн-чт)</p>
+            <p class="tour-available-dates__price">€ 3609</p>
+        </div>
+        <div class="tour-available-dates__card">
+            <p class="tour-available-dates__date">17–20 мар (вт-пт)</p>
+            <p class="tour-available-dates__price">€ 3609</p>
+        </div>
+        <div class="tour-available-dates__card">
+            <p class="tour-available-dates__date">18–21 мар (ср-сб)</p>
+            <p class="tour-available-dates__price">€ 3609</p>
+        </div>
+        <div class="tour-available-dates__card">
+            <p class="tour-available-dates__date">22–25 мар (вс-ср)</p>
+            <p class="tour-available-dates__price">€ 3609</p>
+        </div>
+        <div class="tour-available-dates__card">
+            <p class="tour-available-dates__date">23–26 мар (пн-чт)</p>
+            <p class="tour-available-dates__price">€ 3609</p>
+        </div>
+        <div class="tour-available-dates__card">
+            <p class="tour-available-dates__date">24–27 мар (вт-пт)</p>
+            <p class="tour-available-dates__price">€ 3609</p>
+        </div>
+        <div class="tour-available-dates__card">
+            <p class="tour-available-dates__date">25–28 мар (ср-сб)</p>
+            <p class="tour-available-dates__price">€ 3609</p>
+        </div>
+        <div class="tour-available-dates__card">
+            <p class="tour-available-dates__date">29 мар – 1 апр (вс-ср)</p>
+            <p class="tour-available-dates__price">€ 3609</p>
+        </div>
+        <div class="tour-available-dates__card">
+            <p class="tour-available-dates__date">30 мар – 2 апр (пн-чт)</p>
+            <p class="tour-available-dates__price">€ 3609</p>
+        </div>
+        <div class="tour-available-dates__card">
+            <p class="tour-available-dates__date">31 мар – 3 апр (вт-пт)</p>
+            <p class="tour-available-dates__price">€ 3609</p>
+        </div>
+        <div class="tour-available-dates__card">
+            <p class="tour-available-dates__date">1–4 апр (ср-сб)</p>
+            <p class="tour-available-dates__price">€ 3609</p>
+        </div>
+        <div class="tour-available-dates__card">
+            <p class="tour-available-dates__date">5–8 апр (вс-ср)</p>
+            <p class="tour-available-dates__price">€ 3609</p>
+        </div>
+        <div class="tour-available-dates__card">
+            <p class="tour-available-dates__date">6–9 апр (пн-чт)</p>
+            <p class="tour-available-dates__price">€ 3609</p>
+        </div>
+        <div class="tour-available-dates__card">
+            <p class="tour-available-dates__date">7–10 апр (вт-пт)</p>
+            <p class="tour-available-dates__price">€ 3609</p>
+        </div>
+    </div>
+    <div class="tour-available-dates__actions">
+        <button type="button" class="tour-available-dates__btn offer-reserve-btn">
+            <span class="offer-reserve-btn__text">Выбрать даты</span>
+            <span class="offer-reserve-btn__icon-wrapper">
+                <svg width="30" height="30" viewBox="0 0 145 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M73.9159 71.5561C74.5649 71.2681 74.6248 70.3704 74.0199 69.9991L43.5741 51.3349C43.4355 51.2499 43.2759 51.2051 43.1133 51.205L36.2692 51.2049C35.4461 51.2048 35.0718 52.2329 35.7022 52.7619L63.1592 75.7896C63.417 76.0058 63.7753 76.0571 64.0829 75.9208L73.9159 71.5561Z" fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949"/>
+                    <path d="M48.1774 90.2826C48.7627 89.9272 48.7373 89.0692 48.1318 88.7494L32.761 80.6372C32.559 80.5307 32.3237 80.5066 32.1044 80.5702L19.9053 84.1119C19.1923 84.3189 19.0383 85.2612 19.6487 85.6838L36.0472 97.0362C36.3332 97.2342 36.7092 97.2457 37.0066 97.0652L48.1774 90.2826Z" fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949"/>
+                    <path d="M122.323 41.536C124.724 44.6844 124.066 49.1917 120.867 51.5239L57.6126 97.623L41.6098 100.973L35.3365 96.4923L112.543 40.1152C115.647 37.8491 119.993 38.4804 122.323 41.536Z" fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949"/>
+                    <path d="M20 110.945H80" stroke="#5DB8A6" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </span>
+        </button>
+        <p class="tour-available-dates__note">
+            На Трипстере вы оплачиваете 15% от стоимости, остальные деньги организатору напрямую. Если хотите уточнить детали перед оплатой, <a href="#" class="tour-available-dates__link">напишите организатору</a>.
+        </p>
+    </div>
+</div>

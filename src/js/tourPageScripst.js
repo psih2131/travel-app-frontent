@@ -54,5 +54,26 @@ function funcyBox() {
         },
     });
 }
-export { acordeon, funcyBox, acordeonProgram }
+
+function tourReviewsAccordion() {
+    const detailsBtn = document.querySelector('.js-tour-reviews-details');
+    const accordion = document.querySelector('.js-tour-reviews-accordion');
+    const closeBtn = document.querySelector('.js-tour-reviews-accordion-close');
+
+    if (!detailsBtn || !accordion) return;
+
+    detailsBtn.addEventListener('click', () => {
+        accordion.removeAttribute('hidden');
+        accordion.classList.add('tour-reviews__accordion--open');
+    });
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            accordion.setAttribute('hidden', '');
+            accordion.classList.remove('tour-reviews__accordion--open');
+        });
+    }
+}
+
+export { acordeon, funcyBox, acordeonProgram, tourReviewsAccordion }
 

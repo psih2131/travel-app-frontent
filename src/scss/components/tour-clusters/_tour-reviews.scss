@@ -1,0 +1,226 @@
+.tour-reviews {
+    padding-bottom: 50px;
+}
+
+.tour-reviews__title {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    color: $black1;
+}
+
+.tour-reviews__rating-block {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 35px;
+    padding: 24px;
+    background: $lightGrey1;
+    border-radius: 12px;
+}
+
+.tour-reviews__rating-left {
+    flex-shrink: 0;
+}
+
+.tour-reviews__rating-value {
+    font-size: 36px;
+    font-weight: 700;
+    color: $green1;
+    line-height: 1;
+}
+
+.tour-reviews__rating-stars {
+    display: flex;
+    gap: 2px;
+    margin-top: 8px;
+    color: $green1;
+
+    svg {
+        width: 20px;
+        height: 20px;
+        display: block;
+    }
+}
+
+.tour-reviews__rating-note {
+    font-size: 14px;
+    color: $black1;
+    line-height: 1.5;
+    margin: 16px 0 0 0;
+}
+
+.tour-reviews__rating-link {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    color: $green1;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.25s ease;
+
+    &:hover {
+        color: darken($green1, 8%);
+    }
+}
+
+.tour-reviews__rating-distribution {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.tour-reviews__dist-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    &--active .tour-reviews__dist-bar-fill {
+        width: 100%;
+    }
+
+    &:not(.tour-reviews__dist-row--active) .tour-reviews__dist-bar-fill {
+        width: 4px;
+    }
+}
+
+.tour-reviews__dist-stars {
+    flex-shrink: 0;
+    width: 90px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: $grey1;
+
+    .tour-reviews__dist-row--active & {
+        color: $green1;
+    }
+}
+
+.tour-reviews__dist-bar {
+    flex: 1;
+    height: 8px;
+    background: rgba(93, 184, 166, 0.15);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.tour-reviews__dist-bar-fill {
+    display: block;
+    height: 100%;
+    background: $green1;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.tour-reviews__dist-count {
+    flex-shrink: 0;
+    width: 24px;
+    font-size: 14px;
+    font-weight: 600;
+    color: $black1;
+    text-align: right;
+}
+
+.tour-reviews__accordion {
+    margin-bottom: 35px;
+    padding: 28px;
+    background: rgba(239, 172, 68, 0.12);
+    border-radius: 12px;
+}
+
+.tour-reviews__accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tour-reviews__accordion-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: $black1;
+    margin: 0;
+}
+
+.tour-reviews__accordion-close {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $black1;
+    padding: 0;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.06);
+    }
+
+    svg {
+        display: block;
+    }
+}
+
+.tour-reviews__accordion-body {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.tour-reviews__accordion-item-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: $black1;
+    margin: 0 0 6px 0;
+}
+
+.tour-reviews__accordion-item-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: $black1;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.tour-reviews__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .review {
+        margin-bottom: 0;
+    }
+}
+
+.tour-reviews__load-more {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.tour-reviews__load-more-btn {
+    display: inline-block;
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $green1;
+    background: transparent;
+    border: 2px solid $green1;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.25s ease;
+
+    &:hover {
+        background: $green1;
+        color: $white;
+    }
+}
