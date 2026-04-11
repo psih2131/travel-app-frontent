@@ -1,0 +1,331 @@
+.post-comments {
+    margin-top: 56px;
+    padding-top: 48px;
+    border-top: 1px solid rgba(28, 39, 76, 0.08);
+}
+
+.post-comments__title {
+    margin: 0 0 32px;
+    color: $black1;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 126%;
+    letter-spacing: -0.02em;
+}
+
+.post-comments__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.post-comments__item {
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(28, 39, 76, 0.06);
+
+    &:first-child {
+        padding-top: 0;
+    }
+}
+
+.post-comment {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.post-comment__avatar {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: $lightGrey1;
+}
+
+.post-comment__body {
+    min-width: 0;
+    flex: 1;
+}
+
+.post-comment__name {
+    margin: 0 0 8px;
+    color: $black1;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 130%;
+}
+
+.post-comment__text {
+    margin: 0;
+    color: rgba(28, 39, 76, 0.72);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.post-comments__more {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+}
+
+.post-comments__more-btn {
+    appearance: none;
+    margin: 0;
+    padding: 12px 28px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1;
+    color: $black1;
+    background: transparent;
+    border: 1px solid rgba(28, 39, 76, 0.18);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+
+    &:hover {
+        background: rgba(28, 39, 76, 0.04);
+        border-color: rgba(28, 39, 76, 0.28);
+    }
+
+    &:focus-visible {
+        outline: 2px solid $green1;
+        outline-offset: 2px;
+    }
+}
+
+.post-comments__form-block {
+    margin-top: 48px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(28, 39, 76, 0.08);
+}
+
+.post-comments__form-title {
+    margin: 0 0 24px;
+    color: $black1;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 126%;
+    letter-spacing: -0.02em;
+}
+
+.post-comments-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post-comments-form__row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.post-comments-form__label {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(28, 39, 76, 0.85);
+    line-height: 1.2;
+}
+
+.post-comments-form__input,
+.post-comments-form__textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    color: $black1;
+    background: $white;
+    border: 1px solid rgba(28, 39, 76, 0.12);
+    border-radius: 10px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &::placeholder {
+        color: $grey1;
+        opacity: 0.85;
+    }
+
+    &:hover {
+        border-color: rgba(28, 39, 76, 0.2);
+    }
+
+    &:focus {
+        outline: none;
+        border-color: rgba(93, 184, 166, 0.65);
+        box-shadow: 0 0 0 3px rgba(93, 184, 166, 0.2);
+    }
+}
+
+.post-comments-form__textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.post-comments-form__submit {
+    align-self: flex-start;
+    margin-top: 4px;
+    padding: 14px 28px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    color: $white;
+    background: #85d2a9;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+        background: $black1;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $green1;
+        outline-offset: 2px;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .post-comments {
+        margin-top: 28px;
+        padding-top: 22px;
+    }
+
+    .post-comments__title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 18px;
+        letter-spacing: -0.01em;
+    }
+
+    .post-comments__item {
+        padding: 14px 0;
+    }
+
+    .post-comment {
+        gap: 10px;
+    }
+
+    .post-comment__avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .post-comment__name {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        line-height: 128%;
+    }
+
+    .post-comment__text {
+        font-size: 13px;
+        line-height: 148%;
+    }
+
+    .post-comments__more {
+        margin-top: 18px;
+    }
+
+    .post-comments__more-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+        border-radius: 8px;
+    }
+
+    .post-comments__form-block {
+        margin-top: 26px;
+        padding-top: 22px;
+    }
+
+    .post-comments__form-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+
+    .post-comments-form {
+        gap: 14px;
+    }
+
+    .post-comments-form__row {
+        gap: 6px;
+    }
+
+    .post-comments-form__label {
+        font-size: 12px;
+    }
+
+    .post-comments-form__input,
+    .post-comments-form__textarea {
+        padding: 11px 12px;
+        font-size: 14px;
+        line-height: 138%;
+        border-radius: 8px;
+
+        &:focus {
+            box-shadow: 0 0 0 2px rgba(93, 184, 166, 0.22);
+        }
+    }
+
+    .post-comments-form__textarea {
+        min-height: 88px;
+    }
+
+    .post-comments-form__submit {
+        width: 100%;
+        align-self: stretch;
+        margin-top: 2px;
+        padding: 12px 18px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .post-comments__title {
+        font-size: 16px;
+        margin-bottom: 14px;
+    }
+
+    .post-comment__avatar {
+        width: 36px;
+        height: 36px;
+    }
+
+    .post-comment__name {
+        font-size: 13px;
+    }
+
+    .post-comment__text {
+        font-size: 12px;
+        line-height: 150%;
+    }
+
+    .post-comments__more-btn {
+        padding: 9px 16px;
+        font-size: 12px;
+    }
+
+    .post-comments__form-title {
+        font-size: 15px;
+        margin-bottom: 14px;
+    }
+
+    .post-comments-form__input,
+    .post-comments-form__textarea {
+        font-size: 13px;
+        padding: 10px 11px;
+    }
+
+    .post-comments-form__submit {
+        font-size: 13px;
+        padding: 11px 16px;
+    }
+}

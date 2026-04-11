@@ -1,0 +1,186 @@
+.user-account__user-tours {
+    flex: 1;
+    min-width: 0;
+    background: $white;
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.user-tours__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.user-tours__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $black1;
+    margin: 0;
+}
+
+.user-tours__add-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: $white;
+    background: $green1;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+
+    &:hover {
+        background: darken($green1, 6%);
+    }
+}
+
+.user-tours__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+// Карточка тура гида (похожа на user-order-card)
+.user-tour-card {
+    display: grid;
+    grid-template-columns: 80px 280px 90px 100px 175px;
+    align-items: center;
+    column-gap: 24px;
+    padding: 14px 20px;
+    border-radius: 12px;
+    background: $white;
+    border: 1px solid #E5E5E5;
+    text-decoration: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        border-color: $green1;
+        box-shadow: 0 2px 12px rgba($green1, 0.15);
+    }
+}
+
+.user-tour-card__preview {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: $grey1;
+    flex-shrink: 0;
+}
+
+.user-tour-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.user-tour-card__info {
+    min-width: 0;
+}
+
+.user-tour-card__title {
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $black1;
+}
+
+.user-tour-card__subtitle {
+    margin: 0;
+    font-size: 13px;
+    color: $grey1;
+}
+
+.user-tour-card__duration-value {
+    font-size: 14px;
+    font-weight: 500;
+    color: $black1;
+}
+
+.user-tour-card__price-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: $black1;
+}
+
+.user-tour-card__status-wrap {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user-tour-card__status {
+    min-width: 175px;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 16px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.user-tour-card__status--active {
+    background: $green3;
+    color: $green1;
+}
+
+.user-tour-card__status--on-review {
+    background: rgba($orange1, 0.15);
+    color: $orange1;
+}
+
+.user-tour-card__status--not-published {
+    background: rgba($grey1, 0.2);
+    color: $grey1;
+}
+
+.user-tour-card__status--paused {
+    background: rgba($grey1, 0.25);
+    color: $black1;
+}
+
+.user-tour-card__status--rejected {
+    background: rgba($red1, 0.15);
+    color: $red1;
+}
+
+@media (max-width: 992px) {
+    .user-tour-card {
+        grid-template-columns: 80px minmax(0, 1fr);
+        grid-template-rows: auto auto;
+        gap: 12px;
+    }
+
+    .user-tour-card__duration,
+    .user-tour-card__price {
+        grid-column: 2;
+    }
+
+    .user-tour-card__status-wrap {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 576px) {
+    .user-tours__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .user-tour-card {
+        grid-template-columns: 60px 1fr;
+        padding: 12px 16px;
+        column-gap: 16px;
+    }
+
+    .user-tour-card__preview {
+        width: 60px;
+        height: 60px;
+    }
+}

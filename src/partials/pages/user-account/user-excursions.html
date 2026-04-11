@@ -1,0 +1,66 @@
+<section class="user-account">
+    <div class="container">
+        <div class="user-account__inner">
+            {{> pages/user-account/aside }}
+
+            <div class="user-account__user-excursions">
+                <div class="user-excursions__header">
+                    <h1 class="user-excursions__title">Мои экскурсии</h1>
+                    <a href="#" class="user-excursions__add-btn">Добавить экскурсию</a>
+                </div>
+
+                <div class="user-excursions__list">
+                    {{> user-components/user-excursion-card
+                    img="/src/img/tour1.jpg"
+                    title="Обзорная по Санкт-Петербургу"
+                    subtitle="Прогулка по главным достопримечательностям города"
+                    duration="3 часа"
+                    priceValue="$ 45"
+                    statusModifier="active"
+                    statusText="Активна"
+                    }}
+
+                    {{> user-components/user-excursion-card
+                    img="/src/img/tour2.jpg"
+                    title="Эрмитаж и Дворцовая площадь"
+                    subtitle="Знакомство с шедеврами мирового искусства"
+                    duration="4 часа"
+                    priceValue="$ 65"
+                    statusModifier="on-review"
+                    statusText="На проверке"
+                    }}
+
+                    {{> user-components/user-excursion-card
+                    img="/src/img/tour3.jpg"
+                    title="Исаакиевский собор"
+                    subtitle="Колоннада и панорама города"
+                    duration="2 часа"
+                    priceValue="$ 28"
+                    statusModifier="not-published"
+                    statusText="Не опубликована"
+                    }}
+
+                    {{> user-components/user-excursion-card
+                    img="/src/img/tour5.jpg"
+                    title="Петропавловская крепость"
+                    subtitle="История города и панорамные виды"
+                    duration="2 часа"
+                    priceValue="$ 35"
+                    statusModifier="paused"
+                    statusText="На паузе"
+                    }}
+
+                    {{> user-components/user-excursion-card
+                    img="/src/img/tour6.jpg"
+                    title="Летний сад и Михайловский замок"
+                    subtitle="Парки и резиденции Романовых"
+                    duration="3 часа"
+                    priceValue="$ 42"
+                    statusModifier="rejected"
+                    statusText="Отклонена"
+                    }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

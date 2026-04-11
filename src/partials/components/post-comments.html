@@ -1,0 +1,87 @@
+<section class="post-comments" aria-labelledby="post-comments-heading">
+    <h2 id="post-comments-heading" class="post-comments__title">Комментарии</h2>
+
+    <ul class="post-comments__list">
+        <li class="post-comments__item">
+            <article class="post-comment">
+                <img class="post-comment__avatar" src="https://ui-avatars.com/api/?name=Maria+Sokolova&size=112&background=5DB8A6&color=fff&bold=true"
+                    width="56" height="56" alt="Мария Соколова" loading="lazy">
+                <div class="post-comment__body">
+                    <h3 class="post-comment__name">Мария Соколова</h3>
+                    <p class="post-comment__text">Очень полезная статья, спасибо! Как раз планируем поездку и
+                        не знали, с чего начать — теперь картина сложилась.</p>
+                </div>
+            </article>
+        </li>
+        <li class="post-comments__item">
+            <article class="post-comment">
+                <img class="post-comment__avatar" src="https://ui-avatars.com/api/?name=Alexey+Volkov&size=112&background=A3D2B2&color=1C274C&bold=true"
+                    width="56" height="56" alt="Алексей Волков" loading="lazy">
+                <div class="post-comment__body">
+                    <h3 class="post-comment__name">Алексей Волков</h3>
+                    <p class="post-comment__text">Согласен про брокера — сам проходил этот путь, экономия времени
+                        ощутимая. Жду продолжения про конкретные ЖК.</p>
+                </div>
+            </article>
+        </li>
+        <li class="post-comments__item">
+            <article class="post-comment">
+                <img class="post-comment__avatar" src="https://ui-avatars.com/api/?name=Elena+Morozova&size=112&background=DFF2E5&color=1C274C&bold=true"
+                    width="56" height="56" alt="Елена Морозова" loading="lazy">
+                <div class="post-comment__body">
+                    <h3 class="post-comment__name">Елена Морозова</h3>
+                    <p class="post-comment__text">Кратко и по делу. Особенно понравился блок со списком
+                        преимуществ — удобно переслать знакомым.</p>
+                </div>
+            </article>
+        </li>
+        <li class="post-comments__item">
+            <article class="post-comment">
+                <img class="post-comment__avatar" src="https://ui-avatars.com/api/?name=Dmitry+Kozlov&size=112&background=EFAC44&color=1C274C&bold=true"
+                    width="56" height="56" alt="Дмитрий Козлов" loading="lazy">
+                <div class="post-comment__body">
+                    <h3 class="post-comment__name">Дмитрий Козлов</h3>
+                    <p class="post-comment__text">Хороший обзор. Было бы интересно увидеть сравнение цен по
+                        районам в следующих материалах.</p>
+                </div>
+            </article>
+        </li>
+        <li class="post-comments__item">
+            <article class="post-comment">
+                <img class="post-comment__avatar" src="https://ui-avatars.com/api/?name=Anna+Lebedeva&size=112&background=E97045&color=fff&bold=true"
+                    width="56" height="56" alt="Анна Лебедева" loading="lazy">
+                <div class="post-comment__body">
+                    <h3 class="post-comment__name">Анна Лебедева</h3>
+                    <p class="post-comment__text">Читаю ваш блог давно — качество стабильно высокое. Эта заметка
+                        попала в закладки.</p>
+                </div>
+            </article>
+        </li>
+    </ul>
+
+    <div class="post-comments__more">
+        <button type="button" class="post-comments__more-btn">Загрузить ещё</button>
+    </div>
+
+    <div class="post-comments__form-block">
+        <h3 class="post-comments__form-title" id="post-comments-form-heading">Оставить комментарий</h3>
+        <form class="post-comments-form" aria-labelledby="post-comments-form-heading" action="#" method="post">
+            <div class="post-comments-form__row">
+                <label class="post-comments-form__label" for="post-comment-author">Имя</label>
+                <input class="post-comments-form__input" type="text" id="post-comment-author" name="author"
+                    autocomplete="name" placeholder="Как к вам обращаться" required>
+            </div>
+            <div class="post-comments-form__row">
+                <label class="post-comments-form__label" for="post-comment-email">E-mail</label>
+                <input class="post-comments-form__input" type="email" id="post-comment-email" name="email"
+                    autocomplete="email" placeholder="Для уведомлений (не публикуется)" required>
+            </div>
+            <div class="post-comments-form__row">
+                <label class="post-comments-form__label" for="post-comment-text">Комментарий</label>
+                <textarea class="post-comments-form__textarea" id="post-comment-text" name="comment" rows="5"
+                    placeholder="Ваш текст" required></textarea>
+            </div>
+            <button type="submit" class="post-comments-form__submit">Отправить комментарий</button>
+        </form>
+    </div>
+</section>

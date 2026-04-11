@@ -17,6 +17,7 @@
 @import "components/guide-card";
 @import "components/blog-slider";
 @import "components/post";
+@import "components/post-comments";
 @import "components/review";
 @import "components/wp-editor";
 @import "components/direction-card";
@@ -55,6 +56,9 @@
 @import "user-account/user-aside";
 @import "user-account/user-profile";
 @import "user-account/user-orders";
+@import "user-account/user-tours";
+@import "user-account/user-tour-create";
+@import "user-account/user-excursions";
 @import "user-account/user-be-guide";
 @import "user-account/user-order";
 

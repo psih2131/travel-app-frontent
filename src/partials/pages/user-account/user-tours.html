@@ -1,0 +1,66 @@
+<section class="user-account">
+    <div class="container">
+        <div class="user-account__inner">
+            {{> pages/user-account/aside }}
+
+            <div class="user-account__user-tours">
+                <div class="user-tours__header">
+                    <h1 class="user-tours__title">Мои туры</h1>
+                    <a href="/user-tour-create.html" class="user-tours__add-btn">Добавить тур</a>
+                </div>
+
+                <div class="user-tours__list">
+                    {{> user-components/user-tour-card
+                    img="/src/img/tour1.jpg"
+                    title="Приключение 2 в 1: Вьетнам и Камбоджа"
+                    subtitle="Круиз по бухте Халонг, экскурсии и погружение в культуру"
+                    duration="2 дня"
+                    priceValue="$ 5 370"
+                    statusModifier="active"
+                    statusText="Активен"
+                    }}
+
+                    {{> user-components/user-tour-card
+                    img="/src/img/tour2.jpg"
+                    title="Открытие Бали"
+                    subtitle="Храмы, рисовые террасы и пляжи острова"
+                    duration="5 дней"
+                    priceValue="$ 3 200"
+                    statusModifier="on-review"
+                    statusText="На проверке"
+                    }}
+
+                    {{> user-components/user-tour-card
+                    img="/src/img/tour3.jpg"
+                    title="Литературный Петербург"
+                    subtitle="Маршруты по самым умышленным местам города"
+                    duration="1 день"
+                    priceValue="$ 139"
+                    statusModifier="not-published"
+                    statusText="Не опубликован"
+                    }}
+
+                    {{> user-components/user-tour-card
+                    img="/src/img/tour5.jpg"
+                    title="Кавказ: Эльбрус и Приэльбрусье"
+                    subtitle="Треккинг и восхождения в горах"
+                    duration="7 дней"
+                    priceValue="$ 1 890"
+                    statusModifier="paused"
+                    statusText="На паузе"
+                    }}
+
+                    {{> user-components/user-tour-card
+                    img="/src/img/tour6.jpg"
+                    title="Круиз по Золотому кольцу"
+                    subtitle="Русские города и храмы"
+                    duration="4 дня"
+                    priceValue="$ 720"
+                    statusModifier="rejected"
+                    statusText="Отклонён"
+                    }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
