@@ -57,4 +57,8 @@ heroSearch()
 //user account
 initUserAccountTabs()
 
+if (document.querySelector('.user-tour-create-form')) {
+    import('./tourCreateForm.js').then((m) => m.initTourCreateForm());
+}
+
 

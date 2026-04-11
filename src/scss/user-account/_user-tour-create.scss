@@ -11,11 +11,616 @@
     font-size: 20px;
     font-weight: 600;
     color: $black1;
-    margin: 0 0 24px;
+    margin: 0 0 28px;
 }
 
-.user-tour-create__placeholder {
-    font-size: 14px;
-    color: $grey1;
+.user-tour-create-form__section {
+    margin-bottom: 32px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid rgba(28, 39, 76, 0.08);
+
+    &:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+.user-tour-create-form__section--program .user-tour-create-form__section-title {
+    margin-bottom: 16px;
+}
+
+.user-tour-create-form__subsection-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: $black1;
     margin: 0;
+}
+
+.user-tour-create-form__subsection-title--sm {
+    font-size: 15px;
+}
+
+.user-tour-create-form__section-head--program-stages {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.user-tour-create-form__section-head--nested {
+    margin-bottom: 12px;
+    align-items: flex-start;
+}
+
+.user-tour-create-form__section-head--price-includes,
+.user-tour-create-form__section-head--price-excludes {
+    margin-bottom: 8px;
+}
+
+.user-tour-create-form__section--price-includes .user-tour-create-form__section-title,
+.user-tour-create-form__section--price-excludes .user-tour-create-form__section-title {
+    margin-bottom: 0;
+}
+
+.user-tour-create-price-includes,
+.user-tour-create-price-excludes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.user-tour-create-price-include-row,
+.user-tour-create-price-exclude-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-tour-create-price-include-row__input,
+.user-tour-create-price-exclude-row__input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.user-tour-create-price-include-row__remove,
+.user-tour-create-price-exclude-row__remove {
+    padding: 6px 12px;
+    font-size: 13px;
+    color: $grey1;
+    background: transparent;
+    border: 1px solid rgba(28, 39, 76, 0.15);
+    border-radius: 6px;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    &:hover {
+        color: $red1;
+        border-color: rgba(233, 112, 69, 0.45);
+    }
+}
+
+.user-tour-create-form__section--tour-cost {
+    padding-bottom: 28px;
+}
+
+.user-tour-create-tour-cost {
+    padding: 22px 24px 24px;
+    border-radius: 14px;
+    background: linear-gradient(165deg, rgba(93, 184, 166, 0.12) 0%, $lightGrey1 42%, $white 100%);
+    border: 1px solid rgba(28, 39, 76, 0.1);
+    border-left: 4px solid $green1;
+    box-shadow: 0 10px 32px rgba(28, 39, 76, 0.07);
+}
+
+.user-tour-create-tour-cost__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: $black1;
+    margin: 0 0 18px;
+}
+
+.user-tour-create-tour-cost__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 440px;
+}
+
+.user-tour-create-tour-cost__fields .user-tour-create-form__field--full {
+    max-width: none;
+}
+
+.user-tour-create-tour-cost__fields .user-tour-create-form__input,
+.user-tour-create-tour-cost__fields .user-tour-create-form__textarea {
+    background: $white;
+
+    &:focus {
+        background: $white;
+    }
+}
+
+.user-tour-create-form__add-btn--secondary {
+    padding: 8px 14px;
+    font-size: 13px;
+    background: $white;
+    color: $green1;
+    border: 1px solid $green1;
+
+    &:hover {
+        background: rgba(93, 184, 166, 0.08);
+        opacity: 1;
+    }
+}
+
+.user-tour-create-program-stages {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.user-tour-create-program-stage {
+    padding: 20px;
+    border-radius: 12px;
+    background: $lightGrey1;
+    border: 1px solid rgba(28, 39, 76, 0.06);
+}
+
+.user-tour-create-program-stage__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.user-tour-create-program-stage__name-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px 14px;
+    cursor: text;
+    background: $white;
+    border-radius: 8px;
+    border: 1px solid rgba(28, 39, 76, 0.08);
+    box-sizing: border-box;
+
+    .user-tour-create-form__label {
+        margin-bottom: 0;
+    }
+
+    .user-tour-create-form__input {
+        width: 100%;
+        background: $lightGrey1;
+
+        &:focus {
+            background: $white;
+        }
+    }
+}
+
+.user-tour-create-program-stage__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: $black1;
+    margin: 0;
+}
+
+.user-tour-create-program-stage__remove {
+    padding: 6px 12px;
+    font-size: 13px;
+    color: $red1;
+    background: transparent;
+    border: 1px solid rgba(233, 112, 69, 0.45);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &:hover {
+        background: rgba(233, 112, 69, 0.08);
+    }
+}
+
+.user-tour-create-program-stage__block {
+    margin-bottom: 20px;
+    padding-top: 4px;
+}
+
+.user-tour-create-program-day-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.user-tour-create-program-day-step {
+    padding: 14px;
+    border-radius: 10px;
+    background: $white;
+    border: 1px solid rgba(28, 39, 76, 0.08);
+}
+
+.user-tour-create-program-day-step__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.user-tour-create-program-day-step__label {
+    font-size: 13px;
+    font-weight: 600;
+    color: $black1;
+}
+
+.user-tour-create-program-day-step__remove {
+    padding: 4px 10px;
+    font-size: 12px;
+    color: $grey1;
+    background: transparent;
+    border: 1px solid rgba(28, 39, 76, 0.15);
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:hover {
+        color: $red1;
+        border-color: rgba(233, 112, 69, 0.45);
+    }
+}
+
+.user-tour-create-form__section--accommodation .user-tour-create-form__section-title {
+    margin-bottom: 0;
+}
+
+.user-tour-create-form__section-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.user-tour-create-form__section-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: $black1;
+    margin: 0 0 16px;
+}
+
+.user-tour-create-form__hint {
+    font-size: 13px;
+    line-height: 1.45;
+    color: $grey1;
+    margin: 0 0 14px;
+
+    code {
+        font-size: 12px;
+        padding: 2px 6px;
+        border-radius: 4px;
+        background: $lightGrey1;
+        color: $black1;
+    }
+}
+
+.user-tour-create-form__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 24px;
+    row-gap: 18px;
+}
+
+.user-tour-create-form__field {
+    margin: 0;
+}
+
+.user-tour-create-form__field--full {
+    grid-column: 1 / -1;
+}
+
+.user-tour-create-form__formats {
+    font-size: 12px;
+    color: $grey1;
+    margin: -4px 0 10px;
+}
+
+.user-tour-create-form__formats--inline {
+    margin: 0 0 8px;
+}
+
+.user-tour-create-form__label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: $black1;
+    margin-bottom: 8px;
+}
+
+.user-tour-create-form__input,
+.user-tour-create-form__textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    background: $lightGrey1;
+    border: 1px solid transparent;
+    font-size: 14px;
+    color: $black1;
+    box-sizing: border-box;
+    resize: vertical;
+    min-height: 44px;
+
+    &::placeholder {
+        color: $grey1;
+    }
+
+    &:focus {
+        outline: none;
+        border-color: $green1;
+        background: $white;
+    }
+}
+
+.user-tour-create-form__textarea {
+    min-height: 96px;
+}
+
+.user-tour-create-form__file {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: $lightGrey1;
+    border: 1px dashed rgba(28, 39, 76, 0.2);
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+
+    &:hover {
+        border-color: $green1;
+        background: $white;
+    }
+}
+
+.user-tour-create-form__file--wide {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+}
+
+.user-tour-create-form__file-input {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    font-size: 0;
+}
+
+.user-tour-create-form__file-text {
+    font-size: 14px;
+    color: $green1;
+    font-weight: 500;
+}
+
+.user-tour-create-form__file-error {
+    font-size: 13px;
+    color: $red1;
+    margin: 8px 0 0;
+    line-height: 1.4;
+}
+
+.user-tour-create-form__preview-single {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 12px;
+    min-height: 0;
+}
+
+.user-tour-create-form__preview-thumb-wrap {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &--single {
+        max-width: 280px;
+    }
+}
+
+.user-tour-create-form__preview-remove {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    color: $black1;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+
+    &:hover {
+        background: $red1;
+        color: $white;
+    }
+
+    svg {
+        display: block;
+    }
+}
+
+.user-tour-create-form__preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.user-tour-create-form__preview-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.user-tour-create-form__preview-img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+    background: $lightGrey1;
+    border: 1px solid rgba(28, 39, 76, 0.08);
+}
+
+.user-tour-create-form__preview-thumb-wrap--single .user-tour-create-form__preview-img--single {
+    max-width: none;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    height: auto;
+    display: block;
+}
+
+.user-tour-create-form__preview-caption,
+.user-tour-create-form__preview-name {
+    font-size: 12px;
+    color: $grey1;
+    line-height: 1.3;
+    word-break: break-word;
+}
+
+.user-tour-create-form__preview-name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.user-tour-create-form__add-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $white;
+    background: $green1;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.92;
+    }
+}
+
+.user-tour-create-accommodation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.user-tour-create-accommodation {
+    padding: 20px;
+    border-radius: 12px;
+    background: $lightGrey1;
+    border: 1px solid rgba(28, 39, 76, 0.06);
+}
+
+.user-tour-create-accommodation__head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.user-tour-create-accommodation__title {
+    font-size: 15px;
+    font-weight: 600;
+    color: $black1;
+    margin: 0;
+}
+
+.user-tour-create-accommodation__remove {
+    padding: 6px 12px;
+    font-size: 13px;
+    color: $red1;
+    background: transparent;
+    border: 1px solid rgba(233, 112, 69, 0.45);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &:hover {
+        background: rgba(233, 112, 69, 0.08);
+    }
+}
+
+.user-tour-create-form__editor-wrap {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(28, 39, 76, 0.12);
+    background: $white;
+}
+
+.user-tour-create-form__quill {
+    min-height: 180px;
+}
+
+.user-tour-create-form__quill .ql-editor {
+    min-height: 160px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.user-tour-create-form__quill .ql-toolbar.ql-snow {
+    border: none;
+    border-bottom: 1px solid rgba(28, 39, 76, 0.1);
+    background: $lightGrey1;
+}
+
+.user-tour-create-form__quill .ql-container.ql-snow {
+    border: none;
+    font-family: $mainFont;
+}
+
+.user-tour-create-form__actions {
+    margin-top: 28px;
+    padding-top: 8px;
+}
+
+.user-tour-create-form__submit {
+    padding: 14px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    color: $white;
+    background: $green1;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.92;
+    }
+}
+
+@media (max-width: 720px) {
+    .user-tour-create-form__grid {
+        grid-template-columns: 1fr;
+    }
 }
