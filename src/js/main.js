@@ -24,6 +24,8 @@ import { initTourCreateForm } from "./tourCreateForm.js";
 
 import { initUserBookingReview } from "./userBookingPage.js";
 
+import { initTourBookingPage } from "./tourBookingPage.js";
+
 
 initModals();
 
@@ -64,5 +66,7 @@ initUserAccountTabs()
 initTourCreateForm()
 
 initUserBookingReview()
+
+initTourBookingPage()
 
 

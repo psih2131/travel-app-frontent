@@ -1,0 +1,203 @@
+<section class="tour-booking">
+    <div class="container">
+        <nav class="tour-booking__breadcrumbs bread-crumbs" aria-label="Хлебные крошки">
+            <a href="/index.html" class="bread-crumbs__link">
+                Главная
+                <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3.4394 3.99908L0.969727 1.52941L2.03039 0.46875L5.56072 3.99908L2.03039 7.52941L0.969727 6.46875L3.4394 3.99908Z"
+                        fill="#202020" />
+                </svg>
+            </a>
+            <a href="/tours.html" class="bread-crumbs__link">
+                Туры
+                <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3.4394 3.99908L0.969727 1.52941L2.03039 0.46875L5.56072 3.99908L2.03039 7.52941L0.969727 6.46875L3.4394 3.99908Z"
+                        fill="#202020" />
+                </svg>
+            </a>
+            <a href="/tour.html" class="bread-crumbs__link">
+                Тур
+                <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3.4394 3.99908L0.969727 1.52941L2.03039 0.46875L5.56072 3.99908L2.03039 7.52941L0.969727 6.46875L3.4394 3.99908Z"
+                        fill="#202020" />
+                </svg>
+            </a>
+            <p class="bread-crumbs__current">Бронирование</p>
+        </nav>
+
+        <header class="tour-booking__header">
+            <h1 class="tour-booking__title">Тропическое путешествие: Вьетнам от райских пляжей до горного курорта и джунглей</h1>
+            <p class="tour-booking__subtitle">Авторский тур в Хошимине</p>
+        </header>
+
+        <div class="tour-booking__layout">
+            <div class="tour-booking__main">
+                <form class="tour-booking__form js-tour-booking-form" action="#" method="post" novalidate>
+                    <fieldset class="tour-booking__fieldset">
+                        <legend class="tour-booking__legend">Даты</legend>
+                        <div class="tour-booking__dates-grid" role="radiogroup" aria-label="Доступные даты тура">
+                            <label class="tour-booking__date-card">
+                                <input type="radio" name="tour_date" value="slot-1" class="tour-booking__date-input" data-price="2490" checked />
+                                <span class="tour-booking__date-card-inner">
+                                    <span class="tour-booking__date-range">23 апр — 4 мая (чт—пн)</span>
+                                    <span class="tour-booking__date-price">$ 2490 за одного</span>
+                                </span>
+                            </label>
+                            <label class="tour-booking__date-card">
+                                <input type="radio" name="tour_date" value="slot-2" class="tour-booking__date-input" data-price="2490" />
+                                <span class="tour-booking__date-card-inner">
+                                    <span class="tour-booking__date-range">7 мая — 18 мая (ср—вс)</span>
+                                    <span class="tour-booking__date-price">$ 2490 за одного</span>
+                                </span>
+                            </label>
+                            <label class="tour-booking__date-card">
+                                <input type="radio" name="tour_date" value="slot-3" class="tour-booking__date-input" data-price="2690" />
+                                <span class="tour-booking__date-card-inner">
+                                    <span class="tour-booking__date-range">21 мая — 1 июня (ср—пн)</span>
+                                    <span class="tour-booking__date-price">$ 2690 за одного</span>
+                                </span>
+                            </label>
+                            <label class="tour-booking__date-card">
+                                <input type="radio" name="tour_date" value="slot-4" class="tour-booking__date-input" data-price="2490" />
+                                <span class="tour-booking__date-card-inner">
+                                    <span class="tour-booking__date-range">4 июня — 15 июня (ср—вс)</span>
+                                    <span class="tour-booking__date-price">$ 2490 за одного</span>
+                                </span>
+                            </label>
+                            <label class="tour-booking__date-card">
+                                <input type="radio" name="tour_date" value="slot-5" class="tour-booking__date-input" data-price="2890" />
+                                <span class="tour-booking__date-card-inner">
+                                    <span class="tour-booking__date-range">18 июня — 29 июня (ср—вс)</span>
+                                    <span class="tour-booking__date-price">$ 2890 за одного</span>
+                                </span>
+                            </label>
+                            <label class="tour-booking__date-card">
+                                <input type="radio" name="tour_date" value="slot-6" class="tour-booking__date-input" data-price="2490" />
+                                <span class="tour-booking__date-card-inner">
+                                    <span class="tour-booking__date-range">2 июля — 13 июля (ср—вс)</span>
+                                    <span class="tour-booking__date-price">$ 2490 за одного</span>
+                                </span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <div class="tour-booking__field tour-booking__field--group">
+                        <div class="tour-booking__field-head">
+                            <label class="tour-booking__label" for="tour-booking-participants">Сколько вас будет</label>
+                            <span class="tour-booking__field-hint">до 6 участников</span>
+                        </div>
+                        <select id="tour-booking-participants" name="participants" class="tour-booking__select js-tour-booking-participants">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3" selected>3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+
+                    <div class="tour-booking__contacts">
+                        <div class="tour-booking__contact-col">
+                            <label class="tour-booking__label" for="tour-booking-name">Как вас зовут</label>
+                            <input type="text" id="tour-booking-name" name="customer_name" class="tour-booking__input" placeholder="Имя" autocomplete="name" />
+                        </div>
+                        <div class="tour-booking__contact-col">
+                            <label class="tour-booking__label" for="tour-booking-email">Ваша эл. почта</label>
+                            <input type="email" id="tour-booking-email" name="customer_email" class="tour-booking__input" placeholder="email@example.com" autocomplete="email" />
+                        </div>
+                        <div class="tour-booking__contact-col">
+                            <label class="tour-booking__label" for="tour-booking-phone">Ваш телефон</label>
+                            <div class="tour-booking__phone">
+                                <span class="tour-booking__phone-prefix" aria-hidden="true">
+                                    <span class="tour-booking__phone-flag" title="Россия"></span>
+                                    <span class="tour-booking__phone-code">+7</span>
+                                </span>
+                                <input type="tel" id="tour-booking-phone" name="customer_phone" class="tour-booking__input tour-booking__input--phone" placeholder="900 000-00-00" autocomplete="tel" inputmode="numeric" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tour-booking__field">
+                        <div class="tour-booking__field-head">
+                            <label class="tour-booking__label" for="tour-booking-comment">Вопросы и комментарии</label>
+                            <span class="tour-booking__field-hint tour-booking__field-hint--muted">если хотите</span>
+                        </div>
+                        <textarea id="tour-booking-comment" name="comment" class="tour-booking__textarea" rows="4" placeholder="Напишите вопрос организатору"></textarea>
+                    </div>
+
+                    <div class="tour-booking__footer">
+                        <p class="tour-booking__total js-tour-booking-total" aria-live="polite">Стоимость: $ 7 470 за 3 человека</p>
+                        <p class="tour-booking__disclaimer">Вам не нужно ничего оплачивать, пока вы не получите подтверждение организатора.</p>
+                        <button type="submit" class="tour-booking__submit offer-reserve-btn">
+                            <span class="offer-reserve-btn__text">Отправить заявку</span>
+                            <span class="offer-reserve-btn__icon-wrapper">
+                                <svg width="145" height="145" viewBox="0 0 145 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M73.9159 71.5561C74.5649 71.2681 74.6248 70.3704 74.0199 69.9991L43.5741 51.3349C43.4355 51.2499 43.2759 51.2051 43.1133 51.205L36.2692 51.2049C35.4461 51.2048 35.0718 52.2329 35.7022 52.7619L63.1592 75.7896C63.417 76.0058 63.7753 76.0571 64.0829 75.9208L73.9159 71.5561Z"
+                                        fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                    <path
+                                        d="M48.1774 90.2826C48.7627 89.9272 48.7373 89.0692 48.1318 88.7494L32.761 80.6372C32.559 80.5307 32.3237 80.5066 32.1044 80.5702L19.9053 84.1119C19.1923 84.3189 19.0383 85.2612 19.6487 85.6838L36.0472 97.0362C36.3332 97.2342 36.7092 97.2457 37.0066 97.0652L48.1774 90.2826Z"
+                                        fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                    <path
+                                        d="M122.323 41.536C124.724 44.6844 124.066 49.1917 120.867 51.5239L57.6126 97.623L41.6098 100.973L35.3365 96.4923L112.543 40.1152C115.647 37.8491 119.993 38.4804 122.323 41.536Z"
+                                        fill="#5DB8A6" stroke="#5DB8A6" stroke-width="0.97949" />
+                                    <path d="M20 110.945H80" stroke="#5DB8A6" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <aside class="tour-booking__aside" aria-label="Информация об организаторе и туре">
+                <div class="tour-booking__guide">
+                    <div class="tour-booking__guide-avatar-wrap">
+                        <img class="tour-booking__guide-avatar" src="/src/img/guide2.jpg" alt="" width="56" height="56" />
+                    </div>
+                    <div class="tour-booking__guide-text">
+                        <p class="tour-booking__guide-name">Елена</p>
+                        <p class="tour-booking__guide-meta">Отвечает в течение 5 минут</p>
+                    </div>
+                </div>
+
+                <div class="tour-booking__info-card">
+                    <p class="tour-booking__info-card-title">Авторский тур</p>
+                    <ul class="tour-booking__info-list">
+                        <li>Размер группы не больше 6 человек</li>
+                        <li>Длительность 12 дней</li>
+                        <li>Место встречи: Хошимин, аэропорт, по договорённости</li>
+                    </ul>
+                </div>
+
+                <ul class="tour-booking__trust">
+                    <li class="tour-booking__trust-item tour-booking__trust-item--accent">
+                        <span class="tour-booking__trust-icon tour-booking__trust-icon--badge" aria-hidden="true"></span>
+                        <span>Гарантия лучшей цены при раннем бронировании. <a href="/doc.html" class="tour-booking__trust-link">Подробнее</a></span>
+                    </li>
+                    <li class="tour-booking__trust-item">
+                        <span class="tour-booking__trust-icon tour-booking__trust-icon--check" aria-hidden="true"></span>
+                        <span>Проверенный организатор. 18 отзывов. Оценка 4,89 из 5</span>
+                    </li>
+                    <li class="tour-booking__trust-item">
+                        <span class="tour-booking__trust-icon tour-booking__trust-icon--check" aria-hidden="true"></span>
+                        <span>Можно задать вопросы организатору до оплаты</span>
+                    </li>
+                    <li class="tour-booking__trust-item">
+                        <span class="tour-booking__trust-icon tour-booking__trust-icon--check" aria-hidden="true"></span>
+                        <span>Не нужно платить всё сразу: после подтверждения заказа доступна частичная оплата</span>
+                    </li>
+                    <li class="tour-booking__trust-item">
+                        <span class="tour-booking__trust-icon tour-booking__trust-icon--check" aria-hidden="true"></span>
+                        <span>Гибкие условия возврата — уточняйте у организатора</span>
+                    </li>
+                    <li class="tour-booking__trust-item tour-booking__trust-item--plain">
+                        <span>Мы работаем с 2013 года и помогаем путешественникам собирать поездки мечты</span>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+</section>
