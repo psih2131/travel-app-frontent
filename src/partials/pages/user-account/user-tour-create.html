@@ -301,6 +301,15 @@
                         </div>
                     </div>
 
+                    <div class="user-tour-create-form__section user-tour-create-form__section--available-dates">
+                        <div class="user-tour-create-form__section-head user-tour-create-form__section-head--available-dates">
+                            <h2 class="user-tour-create-form__section-title">Доступные даты</h2>
+                            <button type="button" class="user-tour-create-form__add-btn js-tour-add-available-date">Добавить дату</button>
+                        </div>
+                        <p class="user-tour-create-form__hint">Для каждой даты укажите цену выезда. Можно добавить несколько строк.</p>
+                        <div class="user-tour-create-available-dates js-tour-available-dates-list"></div>
+                    </div>
+
                     <div class="user-tour-create-form__actions">
                         <button type="submit" class="user-tour-create-form__submit">Сохранить черновик</button>
                     </div>
@@ -320,6 +329,34 @@
             placeholder="Например: трансфер из аэропорта"
         />
         <button type="button" class="user-tour-create-price-include-row__remove js-tour-price-include-remove" aria-label="Удалить пункт">Удалить</button>
+    </div>
+</template>
+
+<template id="tour-available-date-row-template">
+    <div class="user-tour-create-available-date-row js-tour-available-date-row">
+        <label class="user-tour-create-available-date-row__col">
+            <span class="user-tour-create-form__label">Дата</span>
+            <input
+                type="text"
+                class="user-tour-create-form__input user-tour-create-available-date-row__date js-tour-available-date-input"
+                name="tour_available_dates[0][date]"
+                autocomplete="off"
+                placeholder="Выберите дату"
+            />
+        </label>
+        <label class="user-tour-create-available-date-row__col">
+            <span class="user-tour-create-form__label">Цена</span>
+            <input
+                type="text"
+                class="user-tour-create-form__input user-tour-create-available-date-row__price js-tour-available-date-price"
+                name="tour_available_dates[0][price]"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                autocomplete="off"
+                placeholder="Например: 45000"
+            />
+        </label>
+        <button type="button" class="user-tour-create-available-date-row__remove js-tour-available-date-remove" aria-label="Удалить строку с датой">Удалить</button>
     </div>
 </template>
 

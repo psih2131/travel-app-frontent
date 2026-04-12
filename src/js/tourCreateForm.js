@@ -1,6 +1,10 @@
 import Quill from 'quill';
 import 'quill/dist/quill.snow.css';
 
+import Flatpickr from 'flatpickr';
+import { Russian } from 'flatpickr/dist/l10n/ru.js';
+import 'flatpickr/dist/flatpickr.min.css';
+
 const quillToolbar = {
     toolbar: [
         [{ header: [2, 3, false] }],
@@ -435,6 +439,78 @@ function initTourAccommodation(form) {
     addBtn.addEventListener('click', addRow);
 }
 
+function bindDigitsOnlyInput(el) {
+    if (!el) return;
+    const sanitize = () => {
+        const next = el.value.replace(/\D/g, '');
+        if (el.value !== next) el.value = next;
+    };
+    el.addEventListener('input', sanitize);
+    el.addEventListener('blur', sanitize);
+}
+
+function reindexTourAvailableDates(listEl) {
+    const rows = listEl.querySelectorAll('.js-tour-available-date-row');
+    rows.forEach((row, i) => {
+        const dateInput = row.querySelector('.js-tour-available-date-input');
+        const priceInput = row.querySelector('.js-tour-available-date-price');
+        if (dateInput) dateInput.name = `tour_available_dates[${i}][date]`;
+        if (priceInput) priceInput.name = `tour_available_dates[${i}][price]`;
+    });
+}
+
+function bindAvailableDateFlatpickr(row) {
+    const dateInput = row.querySelector('.js-tour-available-date-input');
+    if (!dateInput) return;
+
+    const fp = new Flatpickr(dateInput, {
+        locale: Russian,
+        dateFormat: 'Y-m-d',
+        altInput: true,
+        altFormat: 'd.m.Y',
+        altInputClass: 'user-tour-create-form__input user-tour-create-available-date-row__date',
+        allowInput: true,
+        disableMobile: true,
+        appendTo: document.body,
+        monthSelectorType: 'static',
+    });
+
+    row._tourAvailableDateFp = fp;
+}
+
+function initTourAvailableDates(form) {
+    const list = form.querySelector('.js-tour-available-dates-list');
+    const addBtn = form.querySelector('.js-tour-add-available-date');
+    const template = document.getElementById('tour-available-date-row-template');
+
+    if (!list || !addBtn || !template) return;
+
+    const addRow = () => {
+        const node = template.content.cloneNode(true);
+        const row = node.querySelector('.js-tour-available-date-row');
+        if (!row) return;
+
+        list.appendChild(row);
+        reindexTourAvailableDates(list);
+        bindAvailableDateFlatpickr(row);
+        bindDigitsOnlyInput(row.querySelector('.js-tour-available-date-price'));
+
+        const removeBtn = row.querySelector('.js-tour-available-date-remove');
+        if (removeBtn) {
+            removeBtn.addEventListener('click', () => {
+                if (row._tourAvailableDateFp) {
+                    row._tourAvailableDateFp.destroy();
+                    row._tourAvailableDateFp = null;
+                }
+                row.remove();
+                reindexTourAvailableDates(list);
+            });
+        }
+    };
+
+    addBtn.addEventListener('click', addRow);
+}
+
 function initTourTaxonomySearch(form) {
     const blocks = form.querySelectorAll('.js-tour-taxonomy');
     if (!blocks.length) return;
@@ -488,6 +564,7 @@ function initTourCreateForm() {
 
     initTourPriceIncludes(form);
     initTourPriceExcludes(form);
+    initTourAvailableDates(form);
 
     form.addEventListener('submit', () => {
         if (usefulInfoQuill && usefulHidden) {

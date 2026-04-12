@@ -1,0 +1,124 @@
+<section class="user-account">
+    <div class="container">
+        <div class="user-account__inner">
+            {{> pages/user-account/aside }}
+
+            <div class="user-account__user-booking-detail">
+                <article class="user-booking-detail">
+                    <nav class="user-booking-detail__breadcrumbs" aria-label="Навигация">
+                        {{#if breadcrumbBackUrl}}
+                        <a href="{{breadcrumbBackUrl}}" class="user-booking-detail__breadcrumb-link">{{breadcrumbBackLabel}}</a>
+                        {{else}}
+                        <a href="/user-bookings.html" class="user-booking-detail__breadcrumb-link">Мои бронирования</a>
+                        {{/if}}
+                        <span class="user-booking-detail__breadcrumb-sep" aria-hidden="true">›</span>
+                        <span class="user-booking-detail__breadcrumb-current">Бронирование</span>
+                    </nav>
+
+                    {{#if travelerName}}
+                    <section class="user-booking-detail__traveler" aria-label="Путешественник">
+                        <h2 class="user-booking-detail__traveler-heading">Заявка на бронирование</h2>
+                        <div class="user-booking-detail__traveler-card">
+                            <div class="user-booking-detail__traveler-avatar-wrap">
+                                <img class="user-booking-detail__traveler-avatar" src="{{travelerImage}}" alt="" width="64" height="64" />
+                            </div>
+                            <div class="user-booking-detail__traveler-info">
+                                <p class="user-booking-detail__traveler-label">Путешественник</p>
+                                {{#if travelerProfileUrl}}
+                                <a href="{{travelerProfileUrl}}" class="user-booking-detail__traveler-name user-booking-detail__traveler-name--link">{{travelerName}}</a>
+                                {{else}}
+                                <p class="user-booking-detail__traveler-name">{{travelerName}}</p>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </section>
+                    {{/if}}
+
+                    <div class="user-booking-detail__summary">
+                        <div class="user-booking-detail__summary-media">
+                            <a href="{{tourUrl}}" class="user-booking-detail__thumb-link" aria-label="Перейти к странице тура">
+                                <div class="user-booking-detail__thumb">
+                                    <img class="user-booking-detail__thumb-img" src="{{tourImage}}" alt="" width="120" height="120" />
+                                </div>
+                            </a>
+                            <div class="user-booking-detail__summary-main">
+                                <h1 class="user-booking-detail__title">{{tourTitle}}</h1>
+                                <p class="user-booking-detail__subtitle">{{tourSubtitle}}</p>
+                                <div class="user-booking-detail__summary-meta">
+                                    <span class="user-booking-detail__status user-booking-detail__status--{{statusModifier}}">{{statusText}}</span>
+                                    <span class="user-booking-detail__booking-id">№ {{bookingId}}</span>
+                                </div>
+                                <div class="user-booking-detail__tour-actions">
+                                    <a href="{{tourUrl}}" class="user-booking-detail__btn">Перейти к туру</a>
+                                    <a href="{{tourUrl}}" class="user-booking-detail__btn user-booking-detail__btn--outline" target="_blank" rel="noopener noreferrer">Открыть тур в новой вкладке</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <dl class="user-booking-detail__metrics">
+                            <div class="user-booking-detail__metric">
+                                <dt class="user-booking-detail__metric-label">Дата тура</dt>
+                                <dd class="user-booking-detail__metric-value">{{dateMain}}</dd>
+                            </div>
+                            <div class="user-booking-detail__metric">
+                                <dt class="user-booking-detail__metric-label">День недели</dt>
+                                <dd class="user-booking-detail__metric-value">{{dateSub}}</dd>
+                            </div>
+                            <div class="user-booking-detail__metric">
+                                <dt class="user-booking-detail__metric-label">Стоимость</dt>
+                                <dd class="user-booking-detail__metric-value">{{priceValue}}</dd>
+                            </div>
+                        </dl>
+
+                        {{#unless travelerName}}
+                        <a href="{{guideUrl}}" class="user-booking-detail__guide-mini" aria-label="Профиль гида: {{guideName}}">
+                            <div class="user-booking-detail__guide-avatar-wrap">
+                                <img class="user-booking-detail__guide-avatar" src="{{guideAvatar}}" alt="" width="44" height="44" />
+                            </div>
+                            <div class="user-booking-detail__guide-text">
+                                <p class="user-booking-detail__guide-label">Гид</p>
+                                <p class="user-booking-detail__guide-name">{{guideName}}</p>
+                            </div>
+                        </a>
+                        {{/unless}}
+                    </div>
+
+                    {{#if travelerName}}
+                    <section class="user-booking-detail__guide-decision" aria-labelledby="user-booking-guide-decision-title">
+                        <h2 id="user-booking-guide-decision-title" class="user-booking-detail__guide-decision-title">Решение по заявке</h2>
+                        <form class="user-booking-detail__guide-decision-form" action="#" method="post">
+                            <div class="user-booking-detail__guide-decision-actions">
+                                <button type="submit" name="booking_action" value="confirm" class="user-booking-detail__btn">Подтвердить бронирование</button>
+                                <button type="submit" name="booking_action" value="decline" class="user-booking-detail__btn user-booking-detail__btn--outline user-booking-detail__btn--decline">Отклонить бронирование</button>
+                            </div>
+                        </form>
+                    </section>
+                    {{/if}}
+
+                    {{#unless travelerName}}
+                    <section class="user-booking-detail__payment" aria-label="Оплата">
+                        {{!-- WP: оставить одно состояние — скрыть второе (display:none или условие в шаблоне) --}}
+                        <!-- payment-state: ожидание подтверждения гида -->
+                        <div class="user-booking-detail__payment-inner user-booking-detail__payment-inner--waiting" data-payment-state="waiting">
+                            <h2 id="user-booking-payment-wait" class="user-booking-detail__payment-title">Оплата</h2>
+                            <p class="user-booking-detail__payment-wait-text">Оплата будет доступна после подтверждения гидом</p>
+                        </div>
+                        <!-- payment-state: оплата доступна -->
+                        <div class="user-booking-detail__payment-inner user-booking-detail__payment-inner--ready" data-payment-state="ready">
+                            <h2 id="user-booking-payment-ready" class="user-booking-detail__payment-title">Оплата</h2>
+                            <p class="user-booking-detail__payment-lead">Сумма к оплате: <strong>{{priceValue}}</strong></p>
+                            <a href="{{#if paymentUrl}}{{paymentUrl}}{{else}}#{{/if}}" class="user-booking-detail__payment-pay-btn">Оплатить тур</a>
+                        </div>
+                    </section>
+                    {{/unless}}
+
+                    {{> user-components/user-booking-chat guideName=guideName guideAvatar=guideAvatar guideUrl=guideUrl }}
+
+                    {{#unless travelerName}}
+                    {{> user-components/user-booking-review }}
+                    {{/unless}}
+                </article>
+            </div>
+        </div>
+    </div>
+</section>

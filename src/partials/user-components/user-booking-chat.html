@@ -1,0 +1,43 @@
+<section class="user-booking-chat" aria-label="Чат с гидом по бронированию">
+    <header class="user-booking-chat__header">
+        <a href="{{guideUrl}}" class="user-booking-chat__guide-profile" aria-label="Профиль гида: {{guideName}}">
+            <div class="user-booking-chat__header-main">
+                <div class="user-booking-chat__guide-avatar-wrap">
+                    <img class="user-booking-chat__guide-avatar" src="{{guideAvatar}}" alt="" width="40" height="40" />
+                </div>
+                <div class="user-booking-chat__header-text">
+                    <h2 class="user-booking-chat__title">Чат с гидом</h2>
+                    <p class="user-booking-chat__guide-name">{{guideName}}</p>
+                </div>
+            </div>
+        </a>
+    </header>
+
+    <div class="user-booking-chat__messages" role="log" aria-live="polite">
+        <div class="user-booking-chat__msg user-booking-chat__msg--guide">
+            <p class="user-booking-chat__msg-text">Здравствуйте! Подтвердите, пожалуйста, удобное время созвона на этой неделе.</p>
+            <time class="user-booking-chat__msg-time" datetime="2026-06-10T10:15">10 июня, 10:15</time>
+        </div>
+        <div class="user-booking-chat__msg user-booking-chat__msg--user">
+            <p class="user-booking-chat__msg-text">Добрый день! В четверг после 18:00 буду на связи.</p>
+            <time class="user-booking-chat__msg-time" datetime="2026-06-10T10:22">10 июня, 10:22</time>
+        </div>
+        <div class="user-booking-chat__msg user-booking-chat__msg--guide">
+            <p class="user-booking-chat__msg-text">Отлично, напишу вам в четверг заранее.</p>
+            <time class="user-booking-chat__msg-time" datetime="2026-06-10T10:25">10 июня, 10:25</time>
+        </div>
+    </div>
+
+    <form class="user-booking-chat__composer" action="#" method="post">
+        <label class="user-booking-chat__label" for="user-booking-chat-input">Сообщение гиду</label>
+        <textarea
+            id="user-booking-chat-input"
+            class="user-booking-chat__input"
+            name="message"
+            rows="2"
+            placeholder="Напишите сообщение…"
+            autocomplete="off"
+        ></textarea>
+        <button type="submit" class="user-booking-chat__send">Отправить</button>
+    </form>
+</section>

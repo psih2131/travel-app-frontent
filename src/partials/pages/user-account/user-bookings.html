@@ -1,0 +1,51 @@
+<section class="user-account">
+    <div class="container">
+        <div class="user-account__inner">
+            {{> pages/user-account/aside }}
+
+            <div class="user-account__user-bookings user-bookings">
+                <h1 class="user-bookings__title">Мои бронирования</h1>
+
+                <div class="user-bookings__list">
+                    {{> user-components/user-booking-card
+                    cardUrl="/user-booking.html"
+                    tourImage="/src/img/tour3.jpg"
+                    tourTitle="Приключение 2 в 1: Вьетнам и Камбоджа"
+                    tourSubtitle="Круиз по бухте Халонг, экскурсии и погружение в культуру"
+                    dateMain="14 июня 2026"
+                    dateSub="воскресенье"
+                    priceValue="$ 5 370"
+                    statusModifier="confirmed"
+                    statusText="Подтверждён"
+                    unreadText="+1"
+                    }}
+
+                    {{> user-components/user-booking-card
+                    cardUrl="/user-booking.html"
+                    tourImage="/src/img/tour2.jpg"
+                    tourTitle="Открытие Бали"
+                    tourSubtitle="Храмы, рисовые террасы и пляжи острова"
+                    dateMain="3 августа 2026"
+                    dateSub="понедельник"
+                    priceValue="$ 3 200"
+                    statusModifier="confirmed"
+                    statusText="Подтверждён"
+                    }}
+
+                    {{> user-components/user-booking-card
+                    cardUrl="/user-booking.html"
+                    tourImage="/src/img/tour1.jpg"
+                    tourTitle="Приключение 2 в 1: Вьетнам и Камбоджа"
+                    tourSubtitle="Круиз по бухте Халонг, экскурсии и погружение в культуру"
+                    dateMain="22 сентября 2026"
+                    dateSub="вторник"
+                    priceValue="$ 5 370"
+                    statusModifier="cancelled"
+                    statusText="Отменён"
+                    unreadText="+3"
+                    }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

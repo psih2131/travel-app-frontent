@@ -1,0 +1,248 @@
+.user-account__user-guide-bookings {
+    flex: 1;
+    min-width: 0;
+    background: $white;
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.user-guide-bookings__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $black1;
+    margin: 0 0 8px;
+}
+
+.user-guide-bookings__lead {
+    margin: 0 0 24px;
+    font-size: 14px;
+    color: $grey1;
+    line-height: 1.45;
+}
+
+.user-guide-bookings__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.user-guide-booking-card {
+    display: grid;
+    grid-template-columns: minmax(0, 112px) minmax(0, 2.5fr) minmax(0, 120px) auto auto minmax(48px, 56px);
+    align-items: center;
+    column-gap: 20px;
+    min-width: min(100%, 780px);
+    padding: 14px 20px;
+    border-radius: 12px;
+    background: $white;
+    border: 1px solid #e5e5e5;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &:hover {
+        border-color: rgba(93, 184, 166, 0.45);
+        box-shadow: 0 4px 16px rgba(28, 39, 76, 0.06);
+    }
+}
+
+.user-guide-booking-card__client {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    text-align: center;
+}
+
+.user-guide-booking-card__avatar-wrap {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: $lightGrey1;
+    border: 1px solid rgba(28, 39, 76, 0.08);
+    flex-shrink: 0;
+}
+
+.user-guide-booking-card__avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.user-guide-booking-card__client-name {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: $black1;
+    line-height: 1.25;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.user-guide-booking-card__tour-title {
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $black1;
+}
+
+.user-guide-booking-card__tour-subtitle {
+    margin: 0;
+    font-size: 13px;
+    color: $grey1;
+    line-height: 1.35;
+}
+
+.user-guide-booking-card__date-label {
+    margin: 0 0 2px;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: $grey1;
+}
+
+.user-guide-booking-card__date-main {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: $black1;
+}
+
+.user-guide-booking-card__date-sub {
+    margin: 2px 0 0;
+    font-size: 12px;
+    color: $grey1;
+}
+
+.user-guide-booking-card__price-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: $black1;
+}
+
+.user-guide-booking-card__status-wrap {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user-guide-booking-card__status {
+    min-width: 120px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.user-guide-booking-card__status--cancelled {
+    background: rgba(233, 112, 69, 0.1);
+    color: $red1;
+}
+
+.user-guide-booking-card__status--confirmed {
+    background: $green3;
+    color: $green1;
+}
+
+.user-guide-booking-card__status--pending {
+    background: rgba(239, 172, 68, 0.22);
+    color: #9a6610;
+}
+
+.user-guide-booking-card__messages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $grey1;
+}
+
+.user-guide-booking-card:hover .user-guide-booking-card__messages {
+    color: $green1;
+}
+
+.user-guide-booking-card__messages-icon-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-guide-booking-card__messages-icon {
+    display: block;
+}
+
+.user-guide-booking-card__messages-badge {
+    position: absolute;
+    top: -7px;
+    right: -10px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: $red1;
+    color: $white;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 900px) {
+    .user-guide-booking-card {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-areas:
+            'client tour'
+            'date price'
+            'status messages';
+        min-width: 0;
+        row-gap: 14px;
+        align-items: start;
+    }
+
+    .user-guide-booking-card__client {
+        grid-area: client;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+    }
+
+    .user-guide-booking-card__client-name {
+        white-space: normal;
+    }
+
+    .user-guide-booking-card__tour {
+        grid-area: tour;
+    }
+
+    .user-guide-booking-card__date {
+        grid-area: date;
+    }
+
+    .user-guide-booking-card__price {
+        grid-area: price;
+        justify-self: end;
+        text-align: right;
+    }
+
+    .user-guide-booking-card__status-wrap {
+        grid-area: status;
+        justify-content: flex-start;
+    }
+
+    .user-guide-booking-card__messages {
+        grid-area: messages;
+        justify-self: end;
+    }
+}

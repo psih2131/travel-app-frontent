@@ -22,6 +22,8 @@ import { initUserAccountTabs } from "./user-account-scripts.js";
 
 import { initTourCreateForm } from "./tourCreateForm.js";
 
+import { initUserBookingReview } from "./userBookingPage.js";
+
 
 initModals();
 
@@ -60,5 +62,7 @@ heroSearch()
 initUserAccountTabs()
 
 initTourCreateForm()
+
+initUserBookingReview()
 
 
