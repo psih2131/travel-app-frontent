@@ -20,6 +20,8 @@ import { initBaseScripts, openMobileMenu } from "./base-scripts.js";
 
 import { initUserAccountTabs } from "./user-account-scripts.js";
 
+import { initTourCreateForm } from "./tourCreateForm.js";
+
 
 initModals();
 
@@ -57,8 +59,6 @@ heroSearch()
 //user account
 initUserAccountTabs()
 
-if (document.querySelector('.user-tour-create-form')) {
-    import('./tourCreateForm.js').then((m) => m.initTourCreateForm());
-}
+initTourCreateForm()
 
 

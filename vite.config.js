@@ -67,7 +67,7 @@ export default defineConfig({
 
 
 	build: {
-		cssCodeSplit: true,
+		cssCodeSplit: false,
 		rollupOptions: {
 			input: Object.fromEntries(
 				glob.sync(['./*.html', './pages/**/*.html']).map(file => [

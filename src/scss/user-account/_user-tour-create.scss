@@ -126,6 +126,70 @@
     max-width: 440px;
 }
 
+.user-tour-create-tour-cost__basis {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.user-tour-create-tour-cost__basis .user-tour-create-form__label {
+    margin-bottom: 0;
+}
+
+.user-tour-create-tour-cost__segment {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+}
+
+.user-tour-create-tour-cost__segment-btn {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    cursor: pointer;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        margin: 0;
+    }
+}
+
+.user-tour-create-tour-cost__segment-text {
+    display: block;
+    padding: 12px 10px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: $black1;
+    background: $white;
+    border: 1px solid rgba(28, 39, 76, 0.15);
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.user-tour-create-tour-cost__segment-btn:first-child .user-tour-create-tour-cost__segment-text {
+    border-radius: 8px 0 0 8px;
+    border-right-width: 0;
+}
+
+.user-tour-create-tour-cost__segment-btn:last-child .user-tour-create-tour-cost__segment-text {
+    border-radius: 0 8px 8px 0;
+}
+
+.user-tour-create-tour-cost__segment-btn input:checked + .user-tour-create-tour-cost__segment-text {
+    background: $green1;
+    color: $white;
+    border-color: $green1;
+}
+
+.user-tour-create-tour-cost__segment-btn input:focus-visible + .user-tour-create-tour-cost__segment-text {
+    outline: 2px solid $green1;
+    outline-offset: 2px;
+}
+
 .user-tour-create-tour-cost__fields .user-tour-create-form__field--full {
     max-width: none;
 }
@@ -319,6 +383,160 @@
 
 .user-tour-create-form__field--full {
     grid-column: 1 / -1;
+}
+
+.user-tour-create-group-size {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.user-tour-create-group-size__option {
+    margin: 0;
+    cursor: pointer;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        margin: 0;
+    }
+}
+
+.user-tour-create-group-size__text {
+    display: inline-block;
+    min-width: 2.75rem;
+    padding: 10px 14px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: $black1;
+    background: $lightGrey1;
+    border: 1px solid rgba(28, 39, 76, 0.12);
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.user-tour-create-group-size__option input:checked + .user-tour-create-group-size__text {
+    background: $green1;
+    color: $white;
+    border-color: $green1;
+}
+
+.user-tour-create-group-size__option input:focus-visible + .user-tour-create-group-size__text {
+    outline: 2px solid $green1;
+    outline-offset: 2px;
+}
+
+.user-tour-create-form__hint--taxonomy {
+    margin-top: -2px;
+}
+
+.user-tour-create-taxonomy {
+    > .user-tour-create-form__label {
+        margin-bottom: 8px;
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+    }
+}
+
+.user-tour-create-form__grid > .user-tour-create-form__field--full:has(.js-tour-bg-image) {
+    padding: 20px 22px 22px;
+    margin-top: 4px;
+    border-radius: 14px;
+    background: linear-gradient(165deg, rgba(93, 184, 166, 0.1) 0%, $lightGrey1 45%, $white 100%);
+    border: 1px solid rgba(28, 39, 76, 0.12);
+    border-left: 4px solid $green1;
+    box-shadow: 0 10px 32px rgba(28, 39, 76, 0.07);
+
+    .user-tour-create-form__label {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .user-tour-create-form__formats {
+        margin-top: 0;
+        margin-bottom: 12px;
+    }
+
+    .user-tour-create-form__file {
+        margin-top: 0;
+    }
+}
+
+.user-tour-create-taxonomy__search-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: $grey1;
+    margin: 0 0 6px;
+}
+
+.user-tour-create-taxonomy__search {
+    margin-bottom: 10px;
+}
+
+.user-tour-create-taxonomy__scroll {
+    max-height: 220px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 8px;
+    border: 1px solid rgba(28, 39, 76, 0.1);
+    background: $lightGrey1;
+    padding: 6px 0;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba(28, 39, 76, 0.2);
+        border-radius: 4px;
+    }
+}
+
+.user-tour-create-taxonomy__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.user-tour-create-taxonomy__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 12px;
+    margin: 0 6px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    color: $black1;
+    transition: background 0.15s;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.85);
+    }
+
+    input {
+        margin-top: 3px;
+        flex-shrink: 0;
+        accent-color: $green1;
+        cursor: pointer;
+    }
+}
+
+.user-tour-create-taxonomy__item-text {
+    flex: 1;
+    line-height: 1.4;
 }
 
 .user-tour-create-form__formats {

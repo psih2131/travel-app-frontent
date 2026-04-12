@@ -435,9 +435,32 @@ function initTourAccommodation(form) {
     addBtn.addEventListener('click', addRow);
 }
 
+function initTourTaxonomySearch(form) {
+    const blocks = form.querySelectorAll('.js-tour-taxonomy');
+    if (!blocks.length) return;
+
+    blocks.forEach((block) => {
+        const searchInput = block.querySelector('.js-tour-taxonomy-search');
+        const items = block.querySelectorAll('.js-tour-taxonomy-item');
+        if (!searchInput || !items.length) return;
+
+        searchInput.addEventListener('input', () => {
+            const q = searchInput.value.trim().toLowerCase().replace(/\s+/g, ' ');
+            items.forEach((item) => {
+                const textEl = item.querySelector('.user-tour-create-taxonomy__item-text');
+                const text = (textEl?.textContent || '').toLowerCase().trim();
+                const visible = !q || text.includes(q);
+                item.style.display = visible ? '' : 'none';
+            });
+        });
+    });
+}
+
 function initTourCreateForm() {
     const form = document.querySelector('.user-tour-create-form');
     if (!form) return;
+
+    initTourTaxonomySearch(form);
 
     const bgInput = form.querySelector('.js-tour-bg-image');
     const bgPreview = form.querySelector('.js-tour-bg-preview');

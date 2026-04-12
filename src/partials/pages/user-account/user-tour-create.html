@@ -15,6 +15,128 @@
                                 <label class="user-tour-create-form__label" for="tour-title">Название тура</label>
                                 <input class="user-tour-create-form__input" id="tour-title" name="tour_title" type="text" autocomplete="off" />
                             </div>
+
+                            {{!-- Таксономии (в WP — термины; value = ID термина) --}}
+                            <div class="user-tour-create-form__field user-tour-create-form__field--full user-tour-create-taxonomy js-tour-taxonomy" data-taxonomy="direction">
+                                <span class="user-tour-create-form__label">Направления тура</span>
+                                <p class="user-tour-create-form__hint user-tour-create-form__hint--taxonomy">Можно выбрать несколько направлений. В WordPress — термины таксономии направлений.</p>
+                                <label class="user-tour-create-taxonomy__search-label" for="tour-tax-direction-search">Поиск по направлениям</label>
+                                <input
+                                    class="user-tour-create-form__input user-tour-create-taxonomy__search js-tour-taxonomy-search"
+                                    id="tour-tax-direction-search"
+                                    type="search"
+                                    autocomplete="off"
+                                    placeholder="Начните вводить название…"
+                                />
+                                <div class="user-tour-create-taxonomy__scroll">
+                                    <div class="user-tour-create-taxonomy__list js-tour-taxonomy-list" role="group" aria-label="Направления">
+                                        <label class="user-tour-create-taxonomy__item js-tour-taxonomy-item">
+                                            <input type="checkbox" name="tax_tour_direction[]" value="1" />
+                                            <span class="user-tour-create-taxonomy__item-text">Вьетнам</span>
+                                        </label>
+                                        <label class="user-tour-create-taxonomy__item js-tour-taxonomy-item">
+                                            <input type="checkbox" name="tax_tour_direction[]" value="2" />
+                                            <span class="user-tour-create-taxonomy__item-text">Куба</span>
+                                        </label>
+                                        <label class="user-tour-create-taxonomy__item js-tour-taxonomy-item">
+                                            <input type="checkbox" name="tax_tour_direction[]" value="3" />
+                                            <span class="user-tour-create-taxonomy__item-text">Таиланд</span>
+                                        </label>
+                                        <label class="user-tour-create-taxonomy__item js-tour-taxonomy-item">
+                                            <input type="checkbox" name="tax_tour_direction[]" value="4" />
+                                            <span class="user-tour-create-taxonomy__item-text">Индонезия</span>
+                                        </label>
+                                        <label class="user-tour-create-taxonomy__item js-tour-taxonomy-item">
+                                            <input type="checkbox" name="tax_tour_direction[]" value="5" />
+                                            <span class="user-tour-create-taxonomy__item-text">Шри-Ланка</span>
+                                        </label>
+                                        <label class="user-tour-create-taxonomy__item js-tour-taxonomy-item">
+                                            <input type="checkbox" name="tax_tour_direction[]" value="6" />
+                                            <span class="user-tour-create-taxonomy__item-text">Грузия</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="user-tour-create-form__field user-tour-create-form__field--full user-tour-create-taxonomy js-tour-taxonomy" data-taxonomy="rubrika">
+                                <span class="user-tour-create-form__label">Рубрики туров</span>
+                                <p class="user-tour-create-form__hint user-tour-create-form__hint--taxonomy">Можно выбрать несколько рубрик. В WordPress — термины второй таксономии.</p>
+                                <label class="user-tour-create-taxonomy__search-label" for="tour-tax-rubrika-search">Поиск по рубрикам</label>
+                                <input
+                                    class="user-tour-create-form__input user-tour-create-taxonomy__search js-tour-taxonomy-search"
+                                    id="tour-tax-rubrika-search"
+                                    type="search"
+                                    autocomplete="off"
+                                    placeholder="Начните вводить название…"
+                                />
+                                <div class="user-tour-create-taxonomy__scroll">
+                                    <div class="user-tour-create-taxonomy__list js-tour-taxonomy-list" role="group" aria-label="Рубрики туров">
+                                        <label class="user-tour-create-taxonomy__item js-tour-taxonomy-item">
+                                            <input type="checkbox" name="tax_tour_rubrika[]" value="1" />
+                                            <span class="user-tour-create-taxonomy__item-text">За городом</span>
+                                        </label>
+                                        <label class="user-tour-create-taxonomy__item js-tour-taxonomy-item">
+                                            <input type="checkbox" name="tax_tour_rubrika[]" value="2" />
+                                            <span class="user-tour-create-taxonomy__item-text">Индивидуальные туры</span>
+                                        </label>
+                                        <label class="user-tour-create-taxonomy__item js-tour-taxonomy-item">
+                                            <input type="checkbox" name="tax_tour_rubrika[]" value="3" />
+                                            <span class="user-tour-create-taxonomy__item-text">История и архитектура</span>
+                                        </label>
+                                        <label class="user-tour-create-taxonomy__item js-tour-taxonomy-item">
+                                            <input type="checkbox" name="tax_tour_rubrika[]" value="4" />
+                                            <span class="user-tour-create-taxonomy__item-text">Мини-группы</span>
+                                        </label>
+                                        <label class="user-tour-create-taxonomy__item js-tour-taxonomy-item">
+                                            <input type="checkbox" name="tax_tour_rubrika[]" value="5" />
+                                            <span class="user-tour-create-taxonomy__item-text">Обзорные</span>
+                                        </label>
+                                        <label class="user-tour-create-taxonomy__item js-tour-taxonomy-item">
+                                            <input type="checkbox" name="tax_tour_rubrika[]" value="6" />
+                                            <span class="user-tour-create-taxonomy__item-text">Перезагрузка</span>
+                                        </label>
+                                        <label class="user-tour-create-taxonomy__item js-tour-taxonomy-item">
+                                            <input type="checkbox" name="tax_tour_rubrika[]" value="7" />
+                                            <span class="user-tour-create-taxonomy__item-text">Снорклинг</span>
+                                        </label>
+                                        <label class="user-tour-create-taxonomy__item js-tour-taxonomy-item">
+                                            <input type="checkbox" name="tax_tour_rubrika[]" value="8" />
+                                            <span class="user-tour-create-taxonomy__item-text">Со скидкой</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="user-tour-create-form__field user-tour-create-form__field--full">
+                                <span class="user-tour-create-form__label" id="tour-group-size-label">Размер группы</span>
+                                <div class="user-tour-create-group-size" role="radiogroup" aria-labelledby="tour-group-size-label">
+                                    <label class="user-tour-create-group-size__option">
+                                        <input type="radio" name="tour_group_size" value="1" />
+                                        <span class="user-tour-create-group-size__text">1</span>
+                                    </label>
+                                    <label class="user-tour-create-group-size__option">
+                                        <input type="radio" name="tour_group_size" value="3_5" />
+                                        <span class="user-tour-create-group-size__text">3&nbsp;–&nbsp;5</span>
+                                    </label>
+                                    <label class="user-tour-create-group-size__option">
+                                        <input type="radio" name="tour_group_size" value="5_10" />
+                                        <span class="user-tour-create-group-size__text">5&nbsp;–&nbsp;10</span>
+                                    </label>
+                                    <label class="user-tour-create-group-size__option">
+                                        <input type="radio" name="tour_group_size" value="10_15" />
+                                        <span class="user-tour-create-group-size__text">10&nbsp;–&nbsp;15</span>
+                                    </label>
+                                    <label class="user-tour-create-group-size__option">
+                                        <input type="radio" name="tour_group_size" value="15_20" />
+                                        <span class="user-tour-create-group-size__text">15&nbsp;–&nbsp;20</span>
+                                    </label>
+                                    <label class="user-tour-create-group-size__option">
+                                        <input type="radio" name="tour_group_size" value="over_20" />
+                                        <span class="user-tour-create-group-size__text">&gt;20</span>
+                                    </label>
+                                </div>
+                            </div>
+
                             <div class="user-tour-create-form__field user-tour-create-form__field--full">
                                 <span class="user-tour-create-form__label">Фоновое изображение</span>
                                 <p class="user-tour-create-form__formats">JPG, PNG или WebP</p>
@@ -151,6 +273,19 @@
                         <div class="user-tour-create-tour-cost">
                             <h2 class="user-tour-create-tour-cost__title">Стоимость</h2>
                             <div class="user-tour-create-tour-cost__fields">
+                                <div class="user-tour-create-tour-cost__basis">
+                                    <span class="user-tour-create-form__label" id="tour-price-basis-label">Тип цены</span>
+                                    <div class="user-tour-create-tour-cost__segment" role="radiogroup" aria-labelledby="tour-price-basis-label">
+                                        <label class="user-tour-create-tour-cost__segment-btn">
+                                            <input type="radio" name="tour_price_basis" value="group" />
+                                            <span class="user-tour-create-tour-cost__segment-text">Цена за группу</span>
+                                        </label>
+                                        <label class="user-tour-create-tour-cost__segment-btn">
+                                            <input type="radio" name="tour_price_basis" value="person" checked />
+                                            <span class="user-tour-create-tour-cost__segment-text">Цена за человека</span>
+                                        </label>
+                                    </div>
+                                </div>
                                 <div class="user-tour-create-form__field user-tour-create-form__field--full">
                                     <label class="user-tour-create-form__label" for="tour-stoimost-tura">Стоимость тура</label>
                                     <input
