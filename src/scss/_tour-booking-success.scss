@@ -1,0 +1,133 @@
+.tour-booking-success {
+    padding-top: 120px;
+    padding-bottom: 90px;
+    min-height: 50vh;
+}
+
+.tour-booking-success__inner {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.tour-booking-success__card {
+    max-width: 560px;
+    width: 100%;
+    padding: 40px 36px 36px;
+    background: $white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(28, 39, 76, 0.08);
+    border: 1px solid rgba(28, 39, 76, 0.08);
+    text-align: center;
+}
+
+.tour-booking-success__icon {
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.tour-booking-success__title {
+    margin: 0 0 16px;
+    font-size: clamp(22px, 2.5vw, 28px);
+    font-weight: 800;
+    line-height: 1.25;
+    color: $black1;
+    letter-spacing: -0.02em;
+}
+
+.tour-booking-success__lead {
+    margin: 0 0 16px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $black1;
+    font-weight: 500;
+}
+
+.tour-booking-success__note {
+    margin: 0 0 28px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: $grey1;
+    font-weight: 400;
+}
+
+.tour-booking-success__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+}
+
+a.tour-booking-success__cta {
+    text-decoration: none;
+    color: $white;
+    max-width: 100%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 760px) {
+    .tour-booking-success {
+        padding-top: 88px;
+        padding-bottom: 48px;
+        min-height: auto;
+    }
+
+    .tour-booking-success__inner {
+        align-items: stretch;
+    }
+
+    .tour-booking-success__card {
+        padding: 28px 18px 24px;
+        border-radius: 16px;
+        box-shadow: 0 6px 24px rgba(28, 39, 76, 0.07);
+    }
+
+    .tour-booking-success__icon {
+        margin: 0 auto 14px;
+
+        svg {
+            width: 44px;
+            height: 44px;
+        }
+    }
+
+    .tour-booking-success__title {
+        font-size: 20px;
+        margin: 0 0 12px;
+        line-height: 1.3;
+    }
+
+    .tour-booking-success__lead {
+        font-size: 15px;
+        margin: 0 0 12px;
+    }
+
+    .tour-booking-success__note {
+        font-size: 13px;
+        line-height: 1.5;
+        margin: 0 0 22px;
+    }
+
+    .tour-booking-success__actions {
+        gap: 10px;
+    }
+
+    a.tour-booking-success__cta {
+        max-width: none;
+    }
+
+    .tour-booking-success__cta.offer-reserve-btn {
+        .offer-reserve-btn__icon-wrapper {
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+
+            svg {
+                width: 24px;
+                height: auto;
+            }
+        }
+    }
+}
