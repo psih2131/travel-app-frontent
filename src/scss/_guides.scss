@@ -1,30 +1,66 @@
-.guides-page-sec{
+.guides-page-sec {
     padding-top: 125px;
     padding-bottom: 125px;
 }
-.guides-page-sec__filtr-wrapper{
+
+.guides-page-sec__filtr-wrapper {
     margin-top: 50px;
     margin-bottom: 35px;
 }
 
-.guides-page-sec__filtr-title{
+.guides-page-sec__filtr-title {
     margin-bottom: 16px;
     font-size: 24px;
     font-weight: 800;
     line-height: 1;
 }
-.guides-page-sec__filtr-row{
+
+.guides-page-sec__filtr-row {
     display: flex;
     flex-wrap: wrap;
 
 }
-.guides-page-sec__list-people{
+
+.guides-page-sec__list-people {
     width: calc(100% + 20px);
     margin-left: -10px;
     display: flex;
     flex-wrap: wrap;
-    .guide-card-2{
+
+    .guide-card-2 {
         width: calc(25% - 20px);
         margin: 0 10px 20px 10px;
     }
 }
+
+@media only screen and (max-width: 1250px) {
+    .guides-page-sec__list-people {
+        .guide-card-2 {
+            width: calc(50% - 20px);
+        }
+    }
+
+    .guides-page-sec {
+        padding-bottom: 80px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .guides-page-sec__list-people {
+        width: 100%;
+        margin-left: 0;
+
+        .guide-card-2 {
+            width: calc(100%);
+            margin: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    .guides-page-sec {
+        padding-bottom: 60px;
+    }
+}
+
+
+@media only screen and (max-width: 375px) {}

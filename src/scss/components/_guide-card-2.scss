@@ -94,3 +94,18 @@
     }
 
 }
+
+@media only screen and (max-width: 1250px) {}
+
+@media only screen and (max-width: 760px) {
+    .guide-card-2__img-wrapper {
+        height: 240px;
+    }
+
+    .guide-card-2__desctiption {
+        font-size: 12px;
+    }
+}
+
+
+@media only screen and (max-width: 375px) {}
