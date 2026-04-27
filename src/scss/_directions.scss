@@ -53,3 +53,69 @@
 .directions-blog-sec{
     padding-bottom: 80px;
 }
+
+@media only screen and (max-width: 1250px) {
+	.direction-page__wrapper {
+        .direction-card{
+            width: calc(33.333% - 20px);
+        }
+    }
+    .popular-tours-sec__wrapper{
+        .tour-card{
+            width: calc(50% - 30px);
+        }
+    }
+    .directions-guide-sec{
+        padding-bottom: 100px;
+    }
+    .directions-reviews-sec{
+        padding-bottom: 100px;
+    }
+    .directions-blog-sec{
+        padding-bottom: 60px;
+    }
+    .direction-page{
+        padding-bottom: 100px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .direction-page__wrapper {
+        margin-left: 0;
+        justify-content: space-between;
+        width: 100%;
+        .direction-card{
+            margin: 0 0 10px 0;
+            width: calc(50% - 5px);
+        }
+    }
+    .popular-tours-sec__title{
+        font-size: 24px;
+    }
+    .popular-tours-sec__wrapper {
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-between;
+        .tour-card{
+            width: 100%;
+            margin: 0 0 20px 0;
+        }
+    }
+    .popular-tours-sec{
+        padding-bottom: 60px;
+    }
+    .directions-guide-sec{
+        padding-bottom: 60px;
+    }
+    .directions-reviews-sec{
+        padding-bottom: 60px;
+    }
+    .directions-blog-sec{
+        padding-bottom: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 375px) {
+  
+}
