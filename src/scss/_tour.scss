@@ -537,3 +537,196 @@
     color: $black1;
     font-weight: 500;
 }
+
+@media only screen and (max-width: 1250px) {
+	.tour-hero-sec__title{
+        font-size: 28px;
+    }
+    .tour-hero-sec__price {
+        font-size: 14px;
+        span{
+            font-size: 20px;
+        }
+    }
+    .tour-hero-sec__group-size-value{
+        font-size: 14px;
+    }
+    .tour-hero-sec__time-period-value{
+        font-size: 14px;
+    }
+    .tour-hero-sec__rate-counter{
+        font-size: 14px;
+    }
+    .tour-hero-sec__rate-reviews{
+        font-size: 14px;
+    }
+    .galery-tour{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .galery-tour__front-img-wrapper{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .galery-tour__col{
+        width: calc(50% - 5px);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .galery-tour__small-img-wrapper{
+        width: calc(50% - 5px);
+        height: 150px;
+    }
+    .tour-hero-sec{
+        padding-bottom: 60px;
+    }
+    .tour-info-sec__container{
+        flex-wrap: wrap;
+    }
+    .tour-info-sec__main{
+        width: 100%;
+    }
+    .tour-info-sec__fixed-nav{
+        display: none;
+    }
+    .tour-description{
+        font-size: 18px;
+        padding: 30px 0;
+        padding-top: 0;
+    }
+    .org-det__title{
+        font-size: 24px;
+    }
+    .org-det__element-header{
+        padding: 15px 0;
+    }
+    .tour-living__title{
+        font-size: 24px;
+    }
+    .tour-living__subtitle{
+        font-size: 14px;
+    }
+    .tour-living__list{
+        margin-bottom: 30px;
+    }
+    .tour-living__list-element{
+        font-size: 14px;
+    }
+    .program-tour__title{
+        font-size: 24px;
+    }
+    .tour-useful-info__title{
+        font-size: 24px;
+    }
+    .tour-payment-includes__title{
+        font-size: 24px;
+    }
+    .tour-booking-conditions__title{
+        font-size: 24px;
+    }
+    .tour-available-dates__title{
+        font-size: 24px;
+    }
+    .tour-info-sec__aside{
+        width: 100%;
+    }
+    .booking-card{
+        position: relative;
+        top: auto;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .tour-hero-sec__title{
+        font-size: 24px;
+    }
+    .tour-hero-sec__price{
+        font-size: 14px;
+        span{
+            font-size: 20px;
+        }
+    }
+    .tour-hero-sec__group-size-value{
+        font-size: 14px;
+    }
+    .tour-hero-sec__time-period-value{
+        font-size: 14px;
+    }
+    .tour-hero-sec__rate-counter{
+        font-size: 14px;
+    }
+    .tour-hero-sec__info-row{
+        flex-wrap: wrap;
+    }
+    .tour-hero-sec__group-size{
+        margin-left: 0;
+    }
+    .tour-hero-sec__info-row-left{
+        display: contents;
+    }
+    .tour-hero-sec__rate{
+        margin-bottom: 10px;
+    }
+    .tour-hero-sec__time-period{
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .tour-hero-sec{
+        padding-top: 100px;
+    }
+    .galery-tour__front-img-wrapper{
+        border-radius: 15px;
+        height: 300px;
+    }
+    .galery-tour__small-img-wrapper{
+        height: 82px;
+    }
+    .tour-description{
+        font-size: 16px;
+    }
+    .tour-booking-conditions__grid{
+        grid-template-columns: 1fr;
+    }
+    .tour-available-dates__actions .offer-reserve-btn{
+        width: 100%;
+    }
+    .tour-organizer__text{
+        font-size: 14px;
+        text-align: center;
+    }
+    .tour-organizer__profile{
+        width: 100%;
+    }
+    .galery-img{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: 0;
+    }
+    .galery-img__img-wrapper{
+        width: calc(50% - 5px);
+        margin: 0 0 10px 0;
+    }
+    .tour-reviews__rating-left{
+        width: 100%;
+    }
+    .tour-reviews__rating-block{
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+    }
+    .tour-reviews__title{
+        font-size: 24px;
+    }
+    .tour-info-sec{
+        padding-bottom: 80px;
+    }
+    .tour-organizer{
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 375px) {
+	
+}
