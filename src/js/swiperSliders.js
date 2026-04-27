@@ -59,45 +59,28 @@ function postSlider() {
 function guideSlider() {
     if (!document.querySelector(".guide-slider-swiper")) return;
 
-    const swiper = new Swiper(".guide-slider-swiper", {
+    new Swiper(".guide-slider-swiper", {
         modules: [Navigation, Pagination],
         loop: true,
-        slidesPerView: 3,
-        spaceBetween: 30,
         speed: 700,
-        freeMode: {
-            enabled: true,
-            sticky: true,
-        },
-        slidesPerView: "auto",
-        scrollbar: { draggable: true },
+        watchOverflow: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
         navigation: {
             nextEl: ".guide-swiper-button-next",
             prevEl: ".guide-swiper-button-prev",
         },
+        // max-width 760: 1; max-width 1250: 2; иначе 3 (как home-guide-sec, directions-guide-sec)
         breakpoints: {
-            // when window width is >= 320px
-            300: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-
-                // centeredSlides: true
+            761: {
+                slidesPerView: 2,
+                spaceBetween: 24,
             },
-            // when window width is >= 320px
-
-            // when window width is >= 320px
-            780: {
+            1251: {
                 slidesPerView: 3,
                 spaceBetween: 30,
             },
-            // when window width is >= 480px
-            1281: {
-                slidesPerView: 4,
-                spaceBetween: 0,
-            },
-
-        }
-
+        },
     });
 }
 

@@ -42,3 +42,24 @@
     margin-top: 5px;
     font-weight: 500;
 }
+
+@media only screen and (max-width: 1250px) {
+	
+}
+
+@media only screen and (max-width: 760px) {
+    .direction-card__img-wrapper{
+        height: 165px;
+        border-radius: 10px;
+    }
+    .direction-card{
+        border-radius: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 375px) {
+    .direction-card__img-wrapper{
+        height: 150px;
+    }
+}

@@ -2,8 +2,8 @@
 .home-hero-sec {
     display: flex;
     flex-direction: column;
-   overflow: visible;
-   padding-bottom: 125px;
+    overflow: visible;
+    padding-bottom: 125px;
 }
 
 // Блок 1: фон + поиск
@@ -63,7 +63,7 @@
 
 // Блок 2: карточки статистики
 .home-hero-sec__block--stats {
-padding-top: 30px;
+    padding-top: 30px;
 
 }
 
@@ -242,3 +242,98 @@ padding-top: 30px;
 .faq-accordion {
     margin-top: 0;
 }
+
+
+@media only screen and (max-width: 1250px) {
+    .home-hero-sec__stat-num {
+        font-size: 24px;
+    }
+
+    .home-hero-sec {
+        padding-bottom: 80px;
+    }
+
+    .home-popular-directions {
+        padding-bottom: 80px;
+    }
+
+    .home-tours-sec {
+        padding-bottom: 80px;
+    }
+
+    .home-guide-sec {
+        padding-bottom: 80px;
+    }
+
+    .home-reviews-sec {
+        padding-bottom: 80px;
+    }
+
+    .home-faq-sec {
+        padding-bottom: 80px;
+    }
+
+    .home-blog-sec {
+        padding-bottom: 80px;
+    }
+
+    .home-popular-directions__wrapper {
+        .direction-card {
+            width: calc(33.333% - 20px);
+        }
+    }
+
+    .home-tours-sec__wrapper .tour-card {
+        width: calc(50% - 30px);
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .sec-header{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .sec-header__text{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .sec-header__subtitle{
+        text-align: center;
+    }
+    .sec-title{
+        text-align: center;
+    }
+    .home-popular-directions__wrapper {
+        width: 100%;
+        margin-left: 0;
+        justify-content: space-between;
+        .direction-card{
+            width: calc(50% - 5px);
+            margin: 0 0 10px 0;
+        }
+    }
+    .home-popular-directions{
+        padding-bottom: 60px;
+    }
+    .home-tours-sec__wrapper {
+        width: 100%;
+        margin: 0;
+        .tour-card{
+            width: 100%;
+            margin: 0 0 20px 0;
+        }
+    }
+    .home-reviews-sec__slider-wrapper{
+        margin-top: 15px;
+    }
+    .home-blog-sec{
+        padding-bottom: 40px;
+    }
+    .home-tours-sec__wrapper{
+        margin-top: 30px;
+    }
+
+}
+
+
+@media only screen and (max-width: 375px) {}
